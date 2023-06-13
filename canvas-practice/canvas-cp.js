@@ -125,12 +125,22 @@ window.addEventListener("resize", () => {
 
 */ 
 
+
+
+
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas")
     canvas.height = window.innerHeight
     canvas.width = window.innerWidth
 
     const c = canvas.getContext("2d")
+
+    // let rect = canvas.getBoundingClientRect(); 
+    // canvas.width = rect.width * devicePixelRatio;
+    // canvas.height = rect.height * devicePixelRatio; 
+
+    // c.scale(devicePixelRatio, devicePixelRatio);
+    
 
     let colorArray = [
         "#7F669D",
@@ -142,9 +152,15 @@ window.addEventListener("load", () => {
         "#6867AC"
     ]
 
+    // const audio = {
+    //     Song: new Howl({
+    //         src: './audio/guymix6.mp3',
+    //         html5: true
+    //     })
+    // }
+
     
     // arc / circle 
-
     function Circle(x, y, dx , dy, radius, color) {
         this.x = x
         this.y = y
@@ -162,8 +178,8 @@ window.addEventListener("load", () => {
 
         this.update = function () {
     
-            if (this.y + this.radius > 600) {
-                this.radius = 0
+            if (this.y + this.radius > 610) {
+                this.y = 0
             }
             
             this.y += this.dy
@@ -177,12 +193,12 @@ window.addEventListener("load", () => {
         };
     }
 
-    let circleOne = new Circle(300, 0, 0, 5, 20, "#ceedc7")
-    let circleTwo = new Circle(470, 0, 0, 6, 20, "#aee2ff")
-    let circleThree = new Circle(640, 0, 0, 7, 20, "#fecedf")
-    let circleFour = new Circle(810, 0, 0, 8, 20, "#ffdeb4")
-    let circleFive = new Circle(980, 0, 0, 9, 20, "#ffc2fe")
-    let circleSix = new Circle(1150, 0, 0, 10, 20, "#dfffd8")
+    let circleOne = new Circle(300, 0, 0, 8.715, 20, "#ceedc7")
+    let circleTwo = new Circle(470, 0, 0, 5, 20, "#aee2ff")
+    let circleThree = new Circle(640, 0, 0, 5.5, 20, "#fecedf")
+    let circleFour = new Circle(810, 0, 0, 5.5, 20, "#ffdeb4")
+    let circleFive = new Circle(980, 0, 0, 7, 20, "#ffc2fe")
+    let circleSix = new Circle(1150, 0, 0, 6, 20, "#dfffd8")
 
     let stopCircleOneUpdate = true;
     let stopCircleTwoUpdate = true;
@@ -191,6 +207,7 @@ window.addEventListener("load", () => {
     let stopCircleFiveUpdate = true;
     let stopCircleSixUpdate = true;
 
+    let score = 200 
 
 
     // circle function 
@@ -204,6 +221,11 @@ window.addEventListener("load", () => {
         c.lineTo(innerWidth,600)
         c.strokeStyle = "white"
         c.stroke()
+
+        //text 
+        c.font = "20px Helvetica";
+        c.fillText("SCORE", 1300, 50);
+        c.fillText(score, 1300, 80);
 
         //circle1
         c.beginPath()
@@ -284,40 +306,57 @@ window.addEventListener("load", () => {
             const key = e.key.toLowerCase(); 
             console.log(key)
         
-            if (key === 'a') {
-                stopCircleOneUpdate = false
+            if (key === 'a' && circleOne.y > 450) {
+                // stopCircleOneUpdate = false
                 circleOne.remove()
+                score = score + 10
             }
 
-            if (key === 's') {
-                stopCircleTwoUpdate = false
+            if (key === 's' && circleTwo.y > 450) {
+                // stopCircleTwoUpdate = false
                 circleTwo.remove()
+                score = score + 10
             }
 
-            if (key === 'd') {
-                stopCircleThreeUpdate = false
+            if (key === 'd' && circleThree.y > 450) {
+                // stopCircleThreeUpdate = false
                 circleThree.remove()
+                score = score + 10
             }
 
-            if (key === 'j') {
-                stopCircleFourUpdate = false
+            if (key === 'j' && circleFour.y > 450) {
+                // stopCircleFourUpdate = false
                 circleFour.remove()
+                score = score + 10
             }
 
-            if (key === 'k') {
-                stopCircleFiveUpdate = false
+            if (key === 'k' && circleFour.y > 450) {
+                // stopCircleFiveUpdate = false
                 circleFive.remove()
+                score = score + 10
             }
 
-            if (key === 'l') {
-                stopCircleSixUpdate = false
+            if (key === 'l' && circleFour.y > 450) {
+                // stopCircleSixUpdate = false
                 circleSix.remove()
+                score = score + 10
             }
         })
 
     }; 
 
-    animate()
+    
+    
+    
+    let clicked = false
+    window.addEventListener('click', () =>{
+        animate()
+        if (!clicked){
+        audio.Song.play()
+        clicked = true
+        }
+    });
+    
 
    
     
@@ -331,5 +370,8 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight
     canvas.width = window.innerWidth
 });
+
+
+
 
 

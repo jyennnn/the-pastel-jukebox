@@ -24,7 +24,7 @@ gameCanvas2.style.height = `${gamerect2.height}px`;
 // CLASSES
 // ==================================================== 
 
-class Circle2 {
+class CircleGreen {
     constructor(x, y, radius, color, dx, dy) {
         this.x = x 
         this.y = y
@@ -46,13 +46,47 @@ class Circle2 {
 
     update() {
         this.draw(gameC2); 
-
+    
         this.x += this.dx
         this.y += this.dy
     }
 
     remove() {
         this.radius = 0
+        // this.y = -50
+    }
+}
+
+class CircleBlue {
+    constructor(x, y, radius, color, dx, dy) {
+        this.x = x 
+        this.y = y
+        this.radius = radius
+        this.color = color
+        this.dx = dx
+        this.dy = dy
+    }
+
+    draw(gameC2){
+        gameC2.beginPath();
+        gameC2.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+        gameC2.lineWidth = 5
+        gameC2.strokeStyle = "white"
+        gameC2.stroke();
+        gameC2.fillStyle = this.color
+        gameC2.fill()
+    }
+
+    update() {
+        this.draw(gameC2); 
+    
+        this.x += this.dx
+        this.y += this.dy
+    }
+
+    remove() {
+        this.radius = 0
+        // this.y = -50
     }
 }
 
@@ -84,34 +118,57 @@ class Line2 {
 let allCircles = []; 
 
 // ANIMATED CIRCLES
-let circle1Go = new Circle2(325, 0, 27, "#ceedc7", 0, 3);
-allCircles.push(circle1Go)
 
-let circle2Go = new Circle2(525, 0, 27, "#aee2ff", 0, 3.5);
-allCircles.push(circle2Go)
+// GREEN CIRCLE
 
-let circle3Go = new Circle2(725, 0, 27, "#fecedf", 0, 3.8);
-allCircles.push(circle3Go)
+let circleGreenNotes = [
+        {delay: 2.5},
+        {delay: 4.5}, 
+        {delay: 7} 
+] 
 
-let circle4Go = new Circle2(925, 0, 27, "#ffdeb4", 0, 4);
-allCircles.push(circle4Go)
+circleGreenNotes.forEach(obj => {
+    setTimeout(function() {
+        let newCircleGreen = new CircleGreen(325, 0, 27, "#ceedc7", 0, 5)
+        allCircles.push(newCircleGreen);
+        console.log(allCircles);
+      }, obj.delay * 1000);
+})
 
-let circle5Go = new Circle2(1125, 0, 27, "#dfffd8", 0, 4.5);
-allCircles.push(circle5Go)
+
+
+// for (i=0; i<3; i++){
+//     let circle2Go = (new CircleBlue(525, 0, 27, "#aee2ff", 0, (Math.random() * 10)))
+//     allCircles.push(circle2Go) 
+// }
+
+// let circle1Go = new Circle2(325, 0, 27, "#ceedc7", 0, 3);
+// allCircles.push(circle1Go)
+
+// let circle2Go = new Circle2(525, 0, 27, "#aee2ff", 0, 3.5);
+// allCircles.push(circle2Go)
+
+// let circle3Go = new Circle2(725, 0, 27, "#fecedf", 0, 3.8);
+// allCircles.push(circle3Go)
+
+// let circle4Go = new Circle2(925, 0, 27, "#ffdeb4", 0, 4);
+// allCircles.push(circle4Go)
+
+// let circle5Go = new Circle2(1125, 0, 27, "#dfffd8", 0, 4.5);
+// allCircles.push(circle5Go)
 
 // ====================================================
 // AUDIO
 // ==================================================== 
 
-const file = document.getElementById('fileupload');
+// const file = document.getElementById('fileupload');
 
-file.addEventListener('change', function(){
-    const files = this.files
-    const audio1 = document.getElementById('audio1')
-    audio1.src =URL.createObjectURL(files[0])
-    // audio1.load()
-}) 
-
+// file.addEventListener('change', function(){
+//     const files = this.files
+//     const audio1 = document.getElementById('audio1')
+//     audio1.src =URL.createObjectURL(files[0])
+//     // audio1.load()
+// }) 
 
 // ====================================================
 // FUNCTIONS
@@ -124,16 +181,16 @@ let updateAnimations = function() {
     gameC2.clearRect(0, 0, innerWidth, innerHeight)
 
         // CIRCLE
-        allCircles.forEach(circle => {
-            circle.update();
-        })
+            allCircles.forEach(circle => {
+                circle.update();
+            })
 
         // listening to keydowns 
         window.addEventListener('keydown', function(e){
             const key = e.key.toLowerCase(); 
 
             allCircles.forEach(circle => {
-                if (key === 's' && circle === circle1Go) {
+                if (key === 's' && circle.color === '#ceedc7' && circle.y > 550) {
                     circle.remove()
                 }
 
@@ -156,52 +213,53 @@ let updateAnimations = function() {
             })
 }
 
-    
 
 // ====================================================
 // CALLING THE FUNCTIONS
 // ==================================================== 
 
+
+const audio1 = document.getElementById('audio1')
 audio1.addEventListener("play", function(){
     audio1.play()
-
-    const audioContext = new AudioContext();
-    let audioSource = audioContext.createMediaElementSource(audio1)
-    let analyser = audioContext.createAnalyser()
-    audioSource.connect(analyser)
-    analyser.connect(audioContext.destination)
-    analyser.fftSize = 256;
-    const bufferLength = analyser.frequencyBinCount
-    const dataArray = new Uint8Array(bufferLength)
-
-    const beatThreshold = 50 
-    let isBeat = false
-    
-    let analyseBeats = function() {
-    analyser.getByteFrequencyData(dataArray)
-    let energy = 0;
-
-    for (let i = 0; i < bufferLength; i++) {
-        energy += dataArray[i];
-      }
-      energy /= bufferLength;
-
-    if (energy > beatThreshold && !isBeat) {
-        isBeat = true;
-        console.log("Beat detected!");
-    } else if (energy < beatThreshold) {
-        isBeat = false;
-      }
-    
-    requestAnimationFrame(analyseBeats);
-    }
-    analyseBeats();
-
-
-    // after press play, wait a while before starting animations
-    setTimeout(function(){
     updateAnimations();
-    },2000)
+    
+    // const audioContext = new AudioContext();
+    // let audioSource = audioContext.createMediaElementSource(audio1)
+    // let analyser = audioContext.createAnalyser()
+    // audioSource.connect(analyser)
+    // analyser.connect(audioContext.destination)
+    // analyser.fftSize = 256;
+    // const bufferLength = analyser.frequencyBinCount
+    // const dataArray = new Uint8Array(bufferLength)
+
+    // const beatThreshold = 60 
+    // let isBeat = false
+
+    // let analyseBeats = function() {
+    // analyser.getByteFrequencyData(dataArray)
+    // let energy = 0;
+
+    // for (let i = 0; i < bufferLength; i++) {
+    //     energy += dataArray[i];
+    //   }
+    //   energy /= bufferLength;
+
+    // if (energy > beatThreshold && !isBeat) {
+    //     isBeat = true;
+    //     console.log("Beat detected!");
+
+    //     let circle1Go = new CircleGreen(325, 0, 27, "#ceedc7", 0, 5);
+    //     allCircles.push(circle1Go);
+
+    // } else if (energy < beatThreshold) {
+    //     isBeat = false;
+    //   } 
+    
+    // requestAnimationFrame(analyseBeats);
+    // }
+    // analyseBeats();
+
 })
 
 

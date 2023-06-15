@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pastel Jukebox</title>
+    <!--stylesheet------------------>
+    <link rel="stylesheet" href="css/main-tpj.css">  
 
-    <link rel="stylesheet" href="css/main-tpj.css">   
+    <!--fonts------------------>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- <div id="container">
@@ -18,6 +22,20 @@
     <audio id="audio1" controls src="audio/guymix6-tpj.mp3"></audio>
     <!-- <input type="file" id="fileupload" accept="audio/*"/> -->
 
+    <!--=== SONG =================================-->
+    <div id="song-board">SONG:</div>
+    <div id="song-title">guy</div>
+    <div id="song-artist">JYEN</div>
+
+    <!--=== COMBO =================================-->
+    <div id="combo-points">0</div>
+    <div id="combo">COMBO</div>
+
+    <!--=== SCORE =================================-->
+    <div id="scoreboard">SCORE:</div>
+    <div id="points">0</div>
+
+
     <div id="TPJ">
         <canvas id="text-layer"></canvas>
         <canvas id="gameplay-layer2"></canvas>
@@ -26,14 +44,13 @@
     </div>
 
 
-
-
     
     <!-- <script src="script/audio-tpj.js"></script> -->
     <script src="script/background-layer-tpj.js"></script>
     <script src="script/gameplay-layer1-tpj.js"></script>
-    <script src="script/gameplay-layer2-tpj.js"></script>
     <script src="script/text-layer-tpj.js"></script>
+    <script src="script/gameplay-layer2-tpj.js"></script>
+
     
 </body>
 </html>

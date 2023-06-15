@@ -76,19 +76,19 @@ let whiteLine = new Line(325, 600, 1125, 600, "white")
 whiteLine.draw(gameC1);
 
 // STATIONARY CIRCLES BUTTONS
-let circle1 = new Circle(325, 600, 27, "#C5EEDF");
+let circle1 = new Circle(325, 600, 30, "#C5EEDF");
 circle1.draw(gameC1);
 
-let circle2 = new Circle(525, 600, 27, "#B3DEFF");
+let circle2 = new Circle(525, 600, 30, "#B3DEFF");
 circle2.draw(gameC1);
 
-let circle3 = new Circle(725, 600, 27, "#F9CEEE");
+let circle3 = new Circle(725, 600, 30, "#F9CEEE");
 circle3.draw(gameC1);
 
-let circle4 = new Circle(925, 600, 27, "#FFE1C8");
+let circle4 = new Circle(925, 600, 30, "#FFE1C8");
 circle4.draw(gameC1);
 
-let circle5 = new Circle(1125, 600, 27, "#CAA0FF");
+let circle5 = new Circle(1125, 600, 30, "#CAA0FF");
 circle5.draw(gameC1);
 
 

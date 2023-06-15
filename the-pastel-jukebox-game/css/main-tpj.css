@@ -38,6 +38,96 @@
     z-index: 6;
 } 
 
+/*--SONG--------------------------------*/
+
+#song-board {
+    z-index: 5; 
+    position: absolute; 
+    top: 110px;
+    left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#song-title {
+    z-index: 5; 
+    position: absolute; 
+    top: 140px;
+    left: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    color: white;
+    user-select: none;
+}
+
+#song-artist {
+    z-index: 5; 
+    position: absolute; 
+    top: 170px;
+    left: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    color: white;
+    user-select: none;
+}
+
+/*--COMBO--------------------------------*/
+
+#combo-points {
+    z-index: 5; 
+    position: absolute; 
+    top: 40px;
+    left: 717px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#combo {
+    z-index: 5; 
+    position: absolute; 
+    top: 80px;
+    left: 668px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    user-select: none;
+}
+
+/*--SCORE--------------------------------*/
+
+#scoreboard {
+    z-index: 5; 
+    position: absolute; 
+    top: 40px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#points {
+    z-index: 5; 
+    position: absolute; 
+    top: 65px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+}
+
 #TPJ {
     width: 100vw;
     height: 100vh;

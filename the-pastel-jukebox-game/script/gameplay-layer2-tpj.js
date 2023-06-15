@@ -24,6 +24,7 @@ gameCanvas2.style.height = `${gamerect2.height}px`;
 // CLASSES
 // ==================================================== 
 
+
 class FallingCircle {
     constructor(x, y, radius, color, dx, dy) {
         this.x = x 
@@ -90,26 +91,26 @@ class FallingCircle {
 //     }
 // }
 
-class Line2 {
-    constructor(x, y, newx, newy, color) {
-        this.x = x 
-        this.y = y
-        this.newx = newx
-        this.newy = newy
-        this.color = color
-    }
+// class Line2 {
+//     constructor(x, y, newx, newy, color) {
+//         this.x = x 
+//         this.y = y
+//         this.newx = newx
+//         this.newy = newy
+//         this.color = color
+//     }
 
-    draw(gameC2){
-        gameC2.beginPath()
-        gameC2.moveTo(this.x, this.y)
-        gameC2.lineTo(this.newx,this.newy)
-        gameC2.lineWidth = 2
-        gameC2.strokeStyle = this.color
-        gameC2.stroke()
-    }
+//     draw(gameC2){
+//         gameC2.beginPath()
+//         gameC2.moveTo(this.x, this.y)
+//         gameC2.lineTo(this.newx,this.newy)
+//         gameC2.lineWidth = 2
+//         gameC2.strokeStyle = this.color
+//         gameC2.stroke()
+//     }
 
 
-}
+// }
 
 // ====================================================
 // NEW VARIABLES
@@ -187,12 +188,28 @@ audio1.addEventListener("play", function(){
             {delay: 34.98},
             {delay: 35.56},
             {delay: 35.88},
-
+            {delay: 37.84},
+            {delay: 38.96},
+            {delay: 39.5},
+            {delay: 40.64},
+            {delay: 45.75},
+            {delay: 46.02},
+            {delay: 58.68},
+            {delay: 59.315},
+            {delay: 62.96},
+            {delay: 63.56},
+            {delay: 64.15},
+            {delay: 64.42},
+            {delay: 65.2},
+            {delay: 65.82},
+            {delay: 69.68},
+            {delay: 71.77},
+            {delay: 72.9},
     ] 
 
     greenNotes.forEach(obj => {
         setTimeout(function() {
-            let newGreenCircles = new FallingCircle(325, 0, 27, "#C5EEDF", 0, 5)
+            let newGreenCircles = new FallingCircle(325, 0, 30, "#C5EEDF", 0, 5)
             allCircles.push(newGreenCircles);
         }, obj.delay * 1000);
     })
@@ -223,11 +240,30 @@ audio1.addEventListener("play", function(){
         {delay: 34.69},
         {delay: 36.7},
         {delay: 37.52},
+        {delay: 38.17},
+        {delay: 39.22},
+        {delay: 40.64},
+        {delay: 42.9},
+        {delay: 43.48}, 
+        {delay: 44.04}, 
+        {delay: 46.32},
+        {delay: 58.44},
+        {delay: 59.04},
+        {delay: 59.58},
+        {delay: 59.89},
+        {delay: 62.72},
+        {delay: 63.14},
+        {delay: 63.84},
+        {delay: 65.41},
+        {delay: 66.12},
+        {delay: 70.33},
+        {delay: 72.21},
+        {delay: 73.19},
     ] 
 
     blueNotes.forEach(obj => {
     setTimeout(function() {
-        let newBlueCircles = new FallingCircle(525, 0, 27, "#B3DEFF", 0, 5)
+        let newBlueCircles = new FallingCircle(525, 0, 30, "#B3DEFF", 0, 5)
         allCircles.push(newBlueCircles);
     }, obj.delay * 1000);
     })
@@ -247,11 +283,42 @@ audio1.addEventListener("play", function(){
         {delay: 26.21},
         {delay: 33.85},
         {delay: 34.15},
+        {delay: 42.36},
+        {delay: 44.6},
+        {delay: 46.6},
+        {delay: 46.88},
+        {delay: 47.3},
+        {delay: 47.72},
+        {delay: 48.15},
+        {delay: 48.57},
+        {delay: 49.14},
+        {delay: 49.56},
+        {delay: 49.98},
+        {delay: 50.40},
+        {delay: 50.84},
+        {delay: 51.4},
+        {delay: 51.83},
+        {delay: 52.25},
+        {delay: 52.68},
+        {delay: 53.1},
+        {delay: 53.66},
+        {delay: 54.09},
+        {delay: 54.51},
+        {delay: 54.92},
+        {delay: 55.08},
+        {delay: 55.366},  
+        {delay: 57.631},
+        {delay: 62.16},
+        {delay: 62.39},
+        {delay: 66.68},
+        {delay: 71.2},
+        {delay: 71.42},
+        {delay: 73.48},
     ] 
 
     pinkNotes.forEach(obj => {
     setTimeout(function() {
-        let newPinkCircles = new FallingCircle(725, 0, 27, "#F9CEEE", 0, 5)
+        let newPinkCircles = new FallingCircle(725, 0, 30, "#F9CEEE", 0, 5)
         allCircles.push(newPinkCircles);
     }, obj.delay * 1000);
     })
@@ -281,13 +348,29 @@ audio1.addEventListener("play", function(){
         {delay: 34.69},
         {delay: 36.98},
         {delay: 37.23},
+        {delay: 38.42},
+        {delay: 40.37},
+        {delay: 41.49},
+        {delay: 42.9}, 
+        {delay: 43.48},
+        {delay: 44.04},  
+        {delay: 46.32},
+        {delay: 56.44}, 
+        {delay: 57.045},
+        {delay: 61.1},
+        {delay: 61.54},
+        {delay: 67.69},
+        {delay: 68.38},
+        {delay: 70.67},
+        {delay: 72.61},
+        {delay: 73.19},
     ] 
 
     orangeNotes.forEach(obj => {
     setTimeout(function() {
-        let newOrangeCircles = new FallingCircle(925, 0, 27, "#FFE1C8", 0, 5)
+        let newOrangeCircles = new FallingCircle(925, 0, 30, "#FFE1C8", 0, 5)
         allCircles.push(newOrangeCircles);
-    }, obj.delay * 1000);
+    }, obj.delay * 1000);   
     })
 
 
@@ -316,11 +399,28 @@ audio1.addEventListener("play", function(){
         {delay: 34.98},
         {delay: 36.12},
         {delay: 36.46},
+        {delay: 38.42},
+        {delay: 40.08},
+        {delay: 41.22},
+        {delay: 41.82},
+        {delay: 45.75},
+        {delay: 46.02},
+        {delay: 56.16}, 
+        {delay: 56.77},
+        {delay: 60.7},
+        {delay: 61.28},
+        {delay: 67.43},
+        {delay: 68.08},
+        {delay: 68.62},
+        {delay: 68.94},
+        {delay: 70.04},
+        {delay: 71.97},
+        {delay: 72.9},
     ] 
 
     purpleNotes.forEach(obj => {
     setTimeout(function() {
-        let newPurpleCircles = new FallingCircle(1125, 0, 27, "#CAA0FF", 0, 5)
+        let newPurpleCircles = new FallingCircle(1125, 0, 30, "#CAA0FF", 0, 5)
         allCircles.push(newPurpleCircles);
     }, obj.delay * 1000);
     })
@@ -383,25 +483,41 @@ let updateAnimations = function() {
         window.addEventListener('keydown', function(e){
             const key = e.key.toLowerCase(); 
 
-            allCircles.forEach(circle => {
+            allCircles.forEach((circle, index) => {
                 if (key === 's' && circle.color === '#C5EEDF' && circle.y > 550) {
-                    circle.remove()
+                    // circle.remove()
+                    allCircles.splice(index, 1)
+                    score += 100
+                    points.innerHTML = score
                 }
 
                 if (key === 'd' && circle.color === "#B3DEFF" && circle.y > 550) {
-                    circle.remove()
+                    // circle.remove()
+                    allCircles.splice(index, 1)
+                    score += 100
+                    points.innerHTML = score
+                    
                 }
 
                 if (e.keyCode === 32 && circle.color === "#F9CEEE" && circle.y > 550) {
-                    circle.remove()
+                    // circle.remove()
+                    allCircles.splice(index, 1)
+                    score += 100
+                    points.innerHTML = score
                 }
 
                 if (key === 'k' && circle.color === "#FFE1C8" && circle.y > 550) {
-                    circle.remove()
+                    // circle.remove()
+                    allCircles.splice(index, 1)
+                    score += 100
+                    points.innerHTML = score
                 }
 
                 if (key === 'l' && circle.color === "#CAA0FF" && circle.y > 550) {
-                    circle.remove()
+                    // circle.remove()
+                    allCircles.splice(index, 1)
+                    score += 100
+                    points.innerHTML = score
                 }
             })
             })

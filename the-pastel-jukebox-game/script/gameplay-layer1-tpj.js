@@ -62,9 +62,26 @@ class Line {
         gameC1.strokeStyle = this.color
         gameC1.stroke()
     }
-
-
 }
+
+// class LightUp {
+//     constructor(x, y, width, height, color) {
+//         this.x = x 
+//         this.y = y
+//         this.width = width
+//         this.height = height
+//         this.color = color
+//     }
+
+//     draw(gameC1){
+//         gameC1.fillStyle = this.color
+//         gameC1.fillRect(this.x, this.y, this.width, this.height)
+//     }
+
+//     update(){
+//         this.draw(gameC1)
+//     }
+// }
 
 
 // ====================================================
@@ -91,8 +108,67 @@ circle4.draw(gameC1);
 let circle5 = new Circle(1125, 600, 30, "#CAA0FF");
 circle5.draw(gameC1);
 
+// LIGHTS 
+
+let light1 = document.getElementById("light-1")
+light1.style.visibility = "hidden"
+
+let light2 = document.getElementById("light-2")
+light2.style.visibility = "hidden"
+
+let light3 = document.getElementById("light-3")
+light3.style.visibility = "hidden"
+
+let light4 = document.getElementById("light-4")
+light4.style.visibility = "hidden"
+
+let light5 = document.getElementById("light-5")
+light5.style.visibility = "hidden"
+
+
+
+
 
 // ====================================================
 // ANIMATIONS
 // ==================================================== 
+
+
+window.addEventListener('keydown', function(e){
+        const key = e.key.toLowerCase(); 
+        if (key === "s") {
+             light1.style.visibility = "visible"
+        } 
+        else if (key === "d") {
+            light2.style.visibility = "visible"
+        }
+        else if (e.keyCode === 32) {
+            light3.style.visibility = "visible"
+        }
+        else if (key === "k") {
+            light4.style.visibility = "visible"
+        }
+        else if (key === "l") {
+            light5.style.visibility = "visible"
+        }
+})
+
+window.addEventListener('keyup', function(e) {
+    const key = e.key.toLowerCase(); 
+        if (key === 's') {
+             light1.style.visibility = "hidden"
+        }
+        else if (key === "d") {
+            light2.style.visibility = "hidden"
+        }
+        else if (e.keyCode === 32) {
+            light3.style.visibility = "hidden"
+        }
+        else if (key === "k") {
+            light4.style.visibility = "hidden"
+        }
+        else if (key === "l") {
+            light5.style.visibility = "hidden"
+        }
+})
 

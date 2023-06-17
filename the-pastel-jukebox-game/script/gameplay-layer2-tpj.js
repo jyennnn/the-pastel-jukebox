@@ -154,11 +154,14 @@ class FallingCircle {
 // }) 
 
 const audio1 = document.getElementById('audio1')
+const playButton = document.getElementById('play-button')
 // ANIMATED CIRCLES-----------
 let allCircles = []; 
 
-audio1.addEventListener("play", function(){
+// audio1.addEventListener("play", function(){
+playButton.addEventListener("click", function(){
     audio1.play()
+    playButton.remove()
     updateAnimations();
 
     // GREEN CIRCLE
@@ -527,7 +530,6 @@ let updateAnimations = function() {
 // ====================================================
 // CALLING THE FUNCTIONS
 // ==================================================== 
-
 
 
 

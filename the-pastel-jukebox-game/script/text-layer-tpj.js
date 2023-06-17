@@ -37,5 +37,3 @@ const scoreboard = document.getElementById("scoreboard");
 const points = document.getElementById("points");
 
 let score = 0;
-
-

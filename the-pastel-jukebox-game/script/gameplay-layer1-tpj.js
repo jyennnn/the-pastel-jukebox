@@ -126,11 +126,8 @@ let light5 = document.getElementById("light-5")
 light5.style.visibility = "hidden"
 
 
-
-
-
 // ====================================================
-// ANIMATIONS
+// LIGHT UPS 
 // ==================================================== 
 
 

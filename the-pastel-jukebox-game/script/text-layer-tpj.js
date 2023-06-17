@@ -34,6 +34,16 @@ textCanvas.style.height = `${textRect.height}px`;
 // textC.fillText(points, 1300, 120, 200)
 
 const scoreboard = document.getElementById("scoreboard");
-const points = document.getElementById("points");
+const scorePoints = document.getElementById("score-points");
+const missPoints = document.getElementById("miss-points");
+const comboPoints = document.getElementById("combo-points");
+const sPerfectPoints = document.getElementById("s-perfect-points");
+const perfectPoints = document.getElementById("perfect-points");
+const goodPoints = document.getElementById("good-points");
 
-let score = 0;
+let scoreCount = 0;
+let missCount = 0; 
+let comboCount = 0;
+let sPerfectCount = 0; 
+let perfectCount = 0; 
+let goodCount = 0; 

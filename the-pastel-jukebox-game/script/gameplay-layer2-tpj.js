@@ -52,10 +52,10 @@ class FallingCircle {
         this.y += this.dy
     }
 
-    remove() {
-        this.radius = 0
-        // this.y = -50
-    }
+    // remove() {
+    //     this.radius = 0
+    //     // this.y = -50
+    // }
 }
 
 // class CircleBlue {
@@ -465,6 +465,52 @@ playButton.addEventListener("click", function(){
     // analyseBeats();
 
 })
+// ====================================================
+// SCORE SYSTEM FUNCTIONS
+// ==================================================== 
+
+function sPerfectScore(){
+    scoreCount += 1500
+    scorePoints.innerHTML = scoreCount
+    comboCount += 1
+    comboPoints.innerHTML = comboCount
+    sPerfectCount += 1
+    sPerfectPoints.innerHTML = sPerfectCount
+}
+
+function perfectScore(){
+    scoreCount += 1000
+    scorePoints.innerHTML = scoreCount
+    comboCount += 1
+    comboPoints.innerHTML = comboCount
+    perfectCount += 1
+    perfectPoints.innerHTML = perfectCount
+}
+
+function goodScore(){
+    scoreCount += 500
+    scorePoints.innerHTML = scoreCount
+    comboCount += 1
+    comboPoints.innerHTML = comboCount
+    goodCount += 1
+    goodPoints.innerHTML = goodCount
+}
+
+function missScore(){
+    scoreCount -= 500
+    scorePoints.innerHTML = scoreCount
+    missCount += 1 
+    missPoints.innerHTML = missCount
+    comboCount = 0
+    comboPoints.innerHTML = comboCount
+}
+
+function earlyScore(){
+    scoreCount -= 500
+    scorePoints.innerHTML = scoreCount
+    comboCount = 0
+    comboPoints.innerHTML = comboCount
+}
 
 // ====================================================
 // FUNCTIONS
@@ -487,44 +533,126 @@ let updateAnimations = function() {
             const key = e.key.toLowerCase(); 
 
             allCircles.forEach((circle, index) => {
-                if (key === 's' && circle.color === '#C5EEDF' && circle.y > 550) {
-                    // circle.remove()
-                    allCircles.splice(index, 1)
-                    score += 100
-                    points.innerHTML = score
-                }
+            // GREEN CIRCLE ----- 
+                if (key === 's' && circle.color === '#C5EEDF'){
+                    // s-Perfect 
+                    if (circle.y > 590 && circle.y < 625) {
+                        allCircles.splice(index, 1)
+                        sPerfectScore()
+                    }
 
-                if (key === 'd' && circle.color === "#B3DEFF" && circle.y > 550) {
-                    // circle.remove()
-                    allCircles.splice(index, 1)
-                    score += 100
-                    points.innerHTML = score
+                    // Perfect 
+                    if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
+                        allCircles.splice(index, 1)
+                        perfectScore()
+                    }
                     
+                    // Good
+                    if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
+                        allCircles.splice(index, 1)
+                        goodScore()
+                    }
+                }
+                
+            // BLUE CIRCLE ----- 
+                if (key === 'd' && circle.color === "#B3DEFF"){
+                    // s-Perfect 
+                    if (circle.y > 590 && circle.y < 625) {
+                        allCircles.splice(index, 1)
+                        sPerfectScore()
+                    }
+
+                    // Perfect 
+                    if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
+                        allCircles.splice(index, 1)
+                        perfectScore()
+                    }
+                    
+                    // Good
+                    if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
+                        allCircles.splice(index, 1)
+                        goodScore()
+                    }
                 }
 
-                if (e.keyCode === 32 && circle.color === "#F9CEEE" && circle.y > 550) {
-                    // circle.remove()
-                    allCircles.splice(index, 1)
-                    score += 100
-                    points.innerHTML = score
+            // PINK CIRCLE ----- 
+                if (e.keyCode === 32 && circle.color === "#F9CEEE"){
+                    // s-Perfect 
+                    if (circle.y > 590 && circle.y < 625) {
+                        allCircles.splice(index, 1)
+                        sPerfectScore()
+                    }
+
+                    // Perfect 
+                    if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
+                        allCircles.splice(index, 1)
+                        perfectScore()
+                    }
+                    
+                    // Good
+                    if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
+                        allCircles.splice(index, 1)
+                        goodScore()
+                    }
                 }
 
-                if (key === 'k' && circle.color === "#FFE1C8" && circle.y > 550) {
-                    // circle.remove()
-                    allCircles.splice(index, 1)
-                    score += 100
-                    points.innerHTML = score
+            // ORANGE CIRCLE ----- 
+                if (key === 'k' && circle.color === "#FFE1C8"){
+                    // s-Perfect 
+                    if (circle.y > 590 && circle.y < 625) {
+                        allCircles.splice(index, 1)
+                        sPerfectScore()
+                    }
+
+                    // Perfect 
+                    if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
+                        allCircles.splice(index, 1)
+                        perfectScore()
+                    }
+                    
+                    // Good
+                    if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
+                        allCircles.splice(index, 1)
+                        goodScore()
+                    }
                 }
 
-                if (key === 'l' && circle.color === "#CAA0FF" && circle.y > 550) {
-                    // circle.remove()
-                    allCircles.splice(index, 1)
-                    score += 100
-                    points.innerHTML = score
+            // PURPLE CIRCLE ----- 
+                if (key === 'l' && circle.color === "#CAA0FF"){
+                    // s-Perfect 
+                    if (circle.y > 590 && circle.y < 625) {
+                        allCircles.splice(index, 1)
+                        sPerfectScore()
+                    }
+
+                    // Perfect 
+                    if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
+                        allCircles.splice(index, 1)
+                        perfectScore()
+                    }
+                    
+                    // Good
+                    if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
+                        allCircles.splice(index, 1)
+                        goodScore()
+                    }
+
                 }
+
             })
+        })  
+        
+        // listening to misses -----------------
+            allCircles.forEach((circle, index) => {
+                if (circle.y > 664){
+                allCircles.splice(index, 1)
+                missScore()
+                }
             })
 }
+
+
+
 
 
 // ====================================================

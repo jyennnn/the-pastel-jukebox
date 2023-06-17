@@ -139,10 +139,106 @@
     user-select: none;
 }
 
-#points {
+#score-points {
     z-index: 5; 
     position: absolute; 
     top: 65px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+}
+
+#missboard {
+    z-index: 5; 
+    position: absolute; 
+    top: 150px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#miss-points {
+    z-index: 5; 
+    position: absolute; 
+    top: 180px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+}
+
+#s-perfectboard {
+    z-index: 5; 
+    position: absolute; 
+    top: 250px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#s-perfect-points {
+    z-index: 5; 
+    position: absolute; 
+    top: 280px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+}
+
+#perfectboard {
+    z-index: 5; 
+    position: absolute; 
+    top: 350px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#perfect-points {
+    z-index: 5; 
+    position: absolute; 
+    top: 380px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+}
+
+#goodboard {
+    z-index: 5; 
+    position: absolute; 
+    top: 450px;
+    left: 1240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+}
+
+#good-points {
+    z-index: 5; 
+    position: absolute; 
+    top: 480px;
     left: 1240px;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;

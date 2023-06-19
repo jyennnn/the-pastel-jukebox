@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main-tpj.css">  
 
     <!--fonts------------------>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:ital,wght@0,100;0,200;0,400;1,200&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -40,13 +40,15 @@
     <div id="missboard">MISS:</div>
     <div id="miss-points">0</div>
     
-    <div id="s-perfectboard">SUPER PERFECT:</div>
-    <div id="s-perfect-points">0</div>
     <div id="perfectboard">PERFECT:</div>
     <div id="perfect-points">0</div>
-    <div id="goodboard">GOOD:</div>
-    <div id="good-points">0</div>
+    <div id="greatboard">GREAT:</div>
+    <div id="great-points">0</div>
+    <div id="poorboard">POOR:</div>
+    <div id="poor-points">0</div>
 
+     <!--=== HITS =================================-->
+    <div id="hits">PERFECT</div>
 
 
     <!--=== LIGHTS =================================-->
@@ -56,7 +58,19 @@
     <div id="light-4"></div>
     <div id="light-5"></div>
 
+    <!--=== START MENU =================================--> 
+    <section id="start-menu">
+    <div id="game-title">THE<span>PASTEL</span>JUKEBOX</div>
+    <!-- <img id="start-button" src="images/start-menu/start-button.png"/> -->
+    <div id="start-button">
+        <div id="rectangle-1"></div>
+        <div id="rectangle-2"></div>
+        <div id="start-text">START</div>
+    </div>
+    </section>
+
     <div id="TPJ">
+        <canvas id="start-layer"></canvas>
         <canvas id="text-layer"></canvas>
         <canvas id="gameplay-layer2"></canvas>
         <canvas id="gameplay-layer1"></canvas>
@@ -70,6 +84,7 @@
     <script src="script/gameplay-layer1-tpj.js"></script>
     <script src="script/text-layer-tpj.js"></script>
     <script src="script/gameplay-layer2-tpj.js"></script>
+    <script src="script/start-layer-tpj.js"></script>
 
     
 </body>

@@ -469,31 +469,75 @@ playButton.addEventListener("click", function(){
 // SCORE SYSTEM FUNCTIONS
 // ==================================================== 
 
-function sPerfectScore(){
+function perfectScore(){
     scoreCount += 1500
     scorePoints.innerHTML = scoreCount
+
+    //combo 
     comboCount += 1
     comboPoints.innerHTML = comboCount
-    sPerfectCount += 1
-    sPerfectPoints.innerHTML = sPerfectCount
+    comboPoints.classList.add("combo-class")
+    combo.classList.add("combo-class")
+    setTimeout(() => {
+    comboPoints.classList.remove("combo-class")
+    combo.classList.remove("combo-class")}, 300)
+
+    //perfect counter
+    perfectCount += 1
+    perfectPoints.innerHTML = perfectCount
+
+    // hits style
+    hits.style.visibility = "visible"
+    hits.classList.add("hits-class")
+    hits.innerHTML = "PERFECT"
+    hits.style.color = "#B4E4FF"
+    setTimeout(() => {
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"}, 500)
 }
 
-function perfectScore(){
+function greatScore(){
     scoreCount += 1000
     scorePoints.innerHTML = scoreCount
     comboCount += 1
     comboPoints.innerHTML = comboCount
-    perfectCount += 1
-    perfectPoints.innerHTML = perfectCount
+    comboPoints.classList.add("combo-class")
+    combo.classList.add("combo-class")
+    setTimeout(() => {
+    comboPoints.classList.remove("combo-class")
+    combo.classList.remove("combo-class")}, 300)
+
+    greatCount += 1
+    greatPoints.innerHTML = greatCount
+    hits.style.visibility = "visible"
+    hits.classList.add("hits-class")
+    hits.innerHTML = "GREAT"
+    hits.style.color = "#B5F1CC"
+    setTimeout(() => {
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"}, 500)
 }
 
-function goodScore(){
+function poorScore(){
     scoreCount += 500
     scorePoints.innerHTML = scoreCount
     comboCount += 1
     comboPoints.innerHTML = comboCount
-    goodCount += 1
-    goodPoints.innerHTML = goodCount
+    comboPoints.classList.add("combo-class")
+    combo.classList.add("combo-class")
+    setTimeout(() => {
+    comboPoints.classList.remove("combo-class")
+    combo.classList.remove("combo-class")}, 300)
+
+    poorCount += 1
+    poorPoints.innerHTML = poorCount
+    hits.style.visibility = "visible"
+    hits.classList.add("hits-class")
+    hits.innerHTML = "POOR"
+    hits.style.color = "#ECA869"
+    setTimeout(() => {
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"}, 500)
 }
 
 function missScore(){
@@ -503,13 +547,19 @@ function missScore(){
     missPoints.innerHTML = missCount
     comboCount = 0
     comboPoints.innerHTML = comboCount
-}
+    comboPoints.classList.add("combo-class")
+    combo.classList.add("combo-class")
+    setTimeout(() => {
+    comboPoints.classList.remove("combo-class")
+    combo.classList.remove("combo-class")}, 300)
 
-function earlyScore(){
-    scoreCount -= 500
-    scorePoints.innerHTML = scoreCount
-    comboCount = 0
-    comboPoints.innerHTML = comboCount
+    hits.style.visibility = "visible"
+    hits.classList.add("hits-class")
+    hits.innerHTML = "MISS"
+    hits.style.color = "#FF9F9F"
+    setTimeout(() => {
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"}, 500)
 }
 
 // ====================================================
@@ -538,19 +588,19 @@ let updateAnimations = function() {
                     // s-Perfect 
                     if (circle.y > 590 && circle.y < 625) {
                         allCircles.splice(index, 1)
-                        sPerfectScore()
+                        perfectScore()
                     }
 
                     // Perfect 
                     if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
                         allCircles.splice(index, 1)
-                        perfectScore()
+                        greatScore()
                     }
                     
                     // Good
                     if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
                         allCircles.splice(index, 1)
-                        goodScore()
+                        poorScore()
                     }
                 }
                 
@@ -559,19 +609,19 @@ let updateAnimations = function() {
                     // s-Perfect 
                     if (circle.y > 590 && circle.y < 625) {
                         allCircles.splice(index, 1)
-                        sPerfectScore()
+                        perfectScore()
                     }
 
                     // Perfect 
                     if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
                         allCircles.splice(index, 1)
-                        perfectScore()
+                        greatScore()
                     }
                     
                     // Good
                     if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
                         allCircles.splice(index, 1)
-                        goodScore()
+                        poorScore()
                     }
                 }
 
@@ -580,19 +630,19 @@ let updateAnimations = function() {
                     // s-Perfect 
                     if (circle.y > 590 && circle.y < 625) {
                         allCircles.splice(index, 1)
-                        sPerfectScore()
+                        perfectScore()
                     }
 
                     // Perfect 
                     if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
                         allCircles.splice(index, 1)
-                        perfectScore()
+                        greatScore()
                     }
                     
                     // Good
                     if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
                         allCircles.splice(index, 1)
-                        goodScore()
+                        poorScore()
                     }
                 }
 
@@ -601,19 +651,19 @@ let updateAnimations = function() {
                     // s-Perfect 
                     if (circle.y > 590 && circle.y < 625) {
                         allCircles.splice(index, 1)
-                        sPerfectScore()
+                        perfectScore()
                     }
 
                     // Perfect 
                     if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
                         allCircles.splice(index, 1)
-                        perfectScore()
+                        greatScore()
                     }
                     
                     // Good
                     if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
                         allCircles.splice(index, 1)
-                        goodScore()
+                        poorScore()
                     }
                 }
 
@@ -622,19 +672,19 @@ let updateAnimations = function() {
                     // s-Perfect 
                     if (circle.y > 590 && circle.y < 625) {
                         allCircles.splice(index, 1)
-                        sPerfectScore()
+                        perfectScore()
                     }
 
                     // Perfect 
                     if (circle.y > 624 && circle.y < 645 ||  circle.y > 560 && circle.y < 591) {
                         allCircles.splice(index, 1)
-                        perfectScore()
+                        greatScore()
                     }
                     
                     // Good
                     if (circle.y > 644 && circle.y < 665 || circle.y > 525 && circle.y < 561){
                         allCircles.splice(index, 1)
-                        goodScore()
+                        poorScore()
                     }
 
                 }

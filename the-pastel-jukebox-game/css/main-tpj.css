@@ -104,8 +104,8 @@
 #combo-points {
     z-index: 5; 
     position: absolute; 
-    top: 40px;
-    left: 717px;
+    top: 6%;
+    left: 49%;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     color: white;
@@ -116,13 +116,33 @@
 #combo {
     z-index: 5; 
     position: absolute; 
-    top: 80px;
-    left: 668px;
+    top: 12%;
+    left: 45.8%;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 200;
     color: white;
     user-select: none;
+}
+
+@keyframes scaleCombo {
+    from {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.combo-class {
+    animation-name: scaleCombo;
+    animation-duration: 0.3s; 
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
 }
 
 /*--SCORE--------------------------------*/
@@ -175,7 +195,7 @@
     user-select: none;
 }
 
-#s-perfectboard {
+#perfectboard {
     z-index: 5; 
     position: absolute; 
     top: 250px;
@@ -187,7 +207,7 @@
     user-select: none;
 }
 
-#s-perfect-points {
+#perfect-points {
     z-index: 5; 
     position: absolute; 
     top: 280px;
@@ -199,7 +219,7 @@
     user-select: none;
 }
 
-#perfectboard {
+#greatboard {
     z-index: 5; 
     position: absolute; 
     top: 350px;
@@ -211,7 +231,7 @@
     user-select: none;
 }
 
-#perfect-points {
+#great-points {
     z-index: 5; 
     position: absolute; 
     top: 380px;
@@ -223,7 +243,7 @@
     user-select: none;
 }
 
-#goodboard {
+#poorboard {
     z-index: 5; 
     position: absolute; 
     top: 450px;
@@ -235,7 +255,7 @@
     user-select: none;
 }
 
-#good-points {
+#poor-points {
     z-index: 5; 
     position: absolute; 
     top: 480px;
@@ -245,6 +265,41 @@
     font-weight: 100;
     color: white;
     user-select: none;
+}
+
+/*--HITS--------------------------------*/
+
+#hits {
+    z-index: 5; 
+    position: absolute; 
+    top: 26%;
+    left: 42.5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+    user-select: none;
+    visibility: hidden;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(2.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.hits-class {
+    animation-name: scale;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
 }
 
 /*--LIGHTS--------------------------------*/
@@ -299,6 +354,89 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/*--START MENU--------------------------------*/
+
+#game-title {
+    z-index: 8; 
+    position: absolute; 
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    color: #9f6ac3;
+    user-select: none;
+}
+
+#game-title span{
+    color: #f6ceef;
+}
+
+#start-button {
+    z-index: 8; 
+    position: absolute; 
+    top: 45%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+#rectangle-1 {
+    position: absolute;
+    width: 250px;
+    height: 85px;
+    background-color: #fddcff;
+    border-radius: 50px;
+}
+
+#start-button:hover #rectangle-1 {
+    background-color: #eda6d2;
+}
+
+#rectangle-2 {
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    background-color: transparent;
+    border: 5px solid #eda6d2;
+    border-radius: 50px;
+}
+
+#start-button:hover #rectangle-2 {
+    border: 5px solid #fddcff;
+    border-radius: 50px;
+}
+
+#start-text {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #eda6d2;
+    margin: 4.5% 29%;
+}
+
+#start-button:hover #start-text {
+    color: #fddcff;
+}
+
+
+
+/* #start-button:hover {
+    background-image: url("/SEI/joy-git-hub/the-pastel-jukebox/the-pastel-jukebox-game/images/start-menu/start-button-hover.png");
+    z-index: 8; 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -50%);
+    user-select: none;
+} */
+
+
+
 /*--CANVAS--------------------------------*/
 
 #TPJ {
@@ -309,6 +447,13 @@
 
 canvas { 
     position: absolute; 
+}
+
+#start-layer {
+    z-index: 7; 
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3a3ff;
 }
 
 #text-layer {

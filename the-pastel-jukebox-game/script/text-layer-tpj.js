@@ -37,13 +37,16 @@ const scoreboard = document.getElementById("scoreboard");
 const scorePoints = document.getElementById("score-points");
 const missPoints = document.getElementById("miss-points");
 const comboPoints = document.getElementById("combo-points");
-const sPerfectPoints = document.getElementById("s-perfect-points");
 const perfectPoints = document.getElementById("perfect-points");
-const goodPoints = document.getElementById("good-points");
+const greatPoints = document.getElementById("great-points");
+const poorPoints = document.getElementById("poor-points");
+
+const hits = document.getElementById("hits");
+const combo = document.getElementById("combo");
 
 let scoreCount = 0;
 let missCount = 0; 
 let comboCount = 0;
-let sPerfectCount = 0; 
 let perfectCount = 0; 
-let goodCount = 0; 
+let greatCount = 0; 
+let poorCount = 0; 

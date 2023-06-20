@@ -41,6 +41,15 @@
 
 /*--PLAY--------------------------------*/
 
+#info-button-2 {
+    z-index: 5; 
+    position: absolute;
+    width: 40px; 
+    top: 6%;
+    left: 7%;
+    transform: rotate(180deg);
+}
+
 #play-button {
     z-index: 5; 
     position: absolute; 
@@ -537,6 +546,53 @@
     right: 33%;
     transform: rotate(180deg);
 }
+
+#info-button {
+    z-index: 7; 
+    position: absolute;
+    width: 40px; 
+    top: 6%;
+    left: 7%;
+    transform: rotate(180deg);
+}
+
+/*--INFO MENU--------------------------------*/
+#info-menu {
+    z-index: 8; 
+    position: absolute; 
+    width: 1150px;
+    height: 550px;
+    top: 13%;
+    left: 12%;
+    background-color: #c5c2ff;
+    visibility: hidden;
+}
+
+#info-text {
+    margin-top: 60px;
+}
+
+#info-text h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: #8474d1;
+    padding: 20px 130px 0px 130px;
+
+}
+
+#info-controls {
+    width: 800px;
+    margin: 120px 190px 50px 190px;
+}
+
+#info-cancel {
+    position: absolute;
+    width: 35px;
+    margin-left: 93%;
+    margin-top: 3%;
+}
+
 
 /*--CANVAS--------------------------------*/
 

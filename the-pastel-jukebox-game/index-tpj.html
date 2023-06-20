@@ -22,8 +22,11 @@
     <audio id="audio1" controls src="audio/guymix6-tpj.mp3"></audio>
     <!-- <input type="file" id="fileupload" accept="audio/*"/> -->
 
+    <!--=== GAME-MENU - info button =================================--> 
+    <img id="info-button-2" src="images/song-select/information.png"></div>
+
     <!--=== PLAY =================================-->
-    <button id="play-button">PLAY!</button>
+    <!-- <button id="play-button">PLAY!</button> -->
 
     <!--=== SONG =================================-->
     <div id="song-board">SONG:</div>
@@ -71,6 +74,7 @@
 
     <!--=== SONG MENU =================================--> 
     <section id="song-menu">
+        <img id="info-button" src="images/song-select/information.png"></div>
         <img id="left-arrow" src="images/song-select/arrow.png"></div>
         <img id="right-arrow" src="images/song-select/arrow.png"></div>
         <div class="left-arrow"></div>
@@ -87,7 +91,21 @@
                     <div id="triangle-1"></div>
                 </div>
         </div>
-        </section>
+    </section>
+
+    <!--=== INFO MENU =================================--> 
+    <section id="info-menu">
+        <img id="info-cancel" src="images/song-select/info-cancel.png"/>
+        <div id="info-text">
+            <h6 id="info-line-1">hit the respective keys according to the color of the falling balls.</h6>
+            <h6 id="info-line-2">the more accurate your rhythm, the higher score you gain.</h6>
+            <h6 id="info-line-3">good luck.</h6>
+        </div>
+        <img id="info-controls" src="images/song-select/info-controls.png"/>
+        
+    </section>
+
+    
 
     
 
@@ -104,12 +122,13 @@
 
     
     <!-- <script src="script/audio-tpj.js"></script> -->
+    <script src="script/start-layer-tpj.js"></script>
+    <script src="script/songselect-layer-tpj.js"></script>
     <script src="script/background-layer-tpj.js"></script>
     <script src="script/gameplay-layer1-tpj.js"></script>
     <script src="script/text-layer-tpj.js"></script>
     <script src="script/gameplay-layer2-tpj.js"></script>
-    <script src="script/start-layer-tpj.js"></script>
-    <script src="script/songselect-layer-tpj.js"></script>
+
 
     
 </body>

@@ -357,7 +357,7 @@
 /*--START MENU--------------------------------*/
 
 #game-title {
-    z-index: 8; 
+    z-index: 10; 
     position: absolute; 
     top: 35%;
     left: 50%;
@@ -374,7 +374,7 @@
 }
 
 #start-button {
-    z-index: 8; 
+    z-index: 10; 
     position: absolute; 
     top: 45%;
     left: 50%;
@@ -422,20 +422,121 @@
     color: #fddcff;
 }
 
+/*--SONG MENU--------------------------------*/
 
-
-/* #start-button:hover {
-    background-image: url("/SEI/joy-git-hub/the-pastel-jukebox/the-pastel-jukebox-game/images/start-menu/start-button-hover.png");
-    z-index: 8; 
+#song-player {
+    z-index: 7; 
     position: absolute; 
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    transform: translate(-50%, -50%);
     user-select: none;
-} */
+    width: 320px;
+    height: 500px;
+    top: 12%;
+    left: 40%;
+}
+
+#song-select {
+    z-index: 7; 
+    position: absolute; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: #e2c8f5;
+    user-select: none;
+    left: 18%;
+}
 
 
+#rectangle-3 {
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    background-color: #cdbbff;
+    top: 12%;
+}
+
+#rectangle-4 img{
+    position: absolute;
+    margin: 20px 25px;
+    width: 250px;
+    height: 250px;
+    top: 12%;
+    opacity: 0.75;
+}
+
+#song-name {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #8474d1;
+    user-select: none;
+    top: 67%;
+    left: 5%;
+}
+
+#song-artiste {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    color: #8474d1;
+    user-select: none;
+    top: 73%;
+    left: 5%;
+}
+
+#play-guy-button {
+    position: absolute;
+    height: 74px;
+    width: 74px;
+    user-select: none;
+    top: 78%;
+    left: 35%;
+}
+
+#circle-1 {
+    background-color: #9384db;
+    height: 74px;
+    width: 74px;
+    border-radius: 50%;
+}
+
+#triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #cdbbff;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 28%;
+    left: 35%;
+}
+
+#play-guy-button:hover #circle-1 {
+    background-color: hsl(234, 67%, 67%);
+}
+
+#play-guy-button:hover #triangle-1 {
+    border-bottom: 30px solid #ffcffd;
+}
+
+#left-arrow {
+    z-index: 7; 
+    position: absolute;
+    width: 30px; 
+    top: 45%;
+    left: 33%;
+}
+
+#right-arrow {
+    z-index: 7; 
+    position: absolute;
+    width: 30px; 
+    top: 45%;
+    right: 33%;
+    transform: rotate(180deg);
+}
 
 /*--CANVAS--------------------------------*/
 
@@ -450,7 +551,14 @@ canvas {
 }
 
 #start-layer {
-    z-index: 7; 
+    z-index: 9; 
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3a3ff;
+}
+
+#songselect-layer {
+    z-index: 6; 
     width: 100vw;
     height: 100vh;
     background-color: #b3a3ff;

@@ -17,7 +17,6 @@ songCanvas.style.width = `${songRect.width}px`;
 songCanvas.style.height = `${songRect.height}px`;
 // --------------------------------------------------
 
-
 // ====================================================
 // ARROWS
 // ====================================================
@@ -99,3 +98,22 @@ const songMenu = document.getElementById("song-menu")
 //     songCanvas.style.visibility = "hidden"
 //     songMenu.style.visibility = "hidden"
 // })
+
+// ====================================================
+// SONG LIST
+// ====================================================
+
+const songPlayerRangga = document.getElementById("song-player-rangga")
+const otherHalfPreview = document.getElementById("other-half-preview")
+
+rightArrow.addEventListener("click", function() {
+    songPlayerRangga.style.visibility = "visible"
+    guyPreview.pause()
+    otherHalfPreview.play()
+});
+
+leftArrow.addEventListener("click", function() {
+    songPlayerRangga.style.visibility = "hidden"
+    guyPreview.play()
+    otherHalfPreview.pause()
+});

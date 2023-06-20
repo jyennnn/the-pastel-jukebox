@@ -433,6 +433,16 @@
 
 /*--SONG MENU--------------------------------*/
 
+#guy-preview {
+    position: absolute;
+    visibility: hidden;
+}
+
+#other-half-preview {
+    position: absolute;
+    visibility: hidden;
+}
+
 #song-player {
     z-index: 7; 
     position: absolute; 
@@ -441,6 +451,17 @@
     height: 500px;
     top: 12%;
     left: 40%;
+}
+
+#song-player-rangga {
+    z-index: 7; 
+    position: absolute; 
+    user-select: none;
+    width: 320px;
+    height: 500px;
+    top: 12%;
+    left: 40%;
+    visibility: hidden;
 }
 
 #song-select {

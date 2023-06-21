@@ -153,16 +153,18 @@ class FallingCircle {
 //     // audio1.load()
 // }) 
 
-const audio1 = document.getElementById('audio1')
+const guyMusic = document.getElementById('guy-music')
 // const playButton = document.getElementById('play-button')
 // ANIMATED CIRCLES-----------
 let allCircles = []; 
 
 // audio1.addEventListener("play", function(){
 playGuyButton.addEventListener("click", function(){
-    songCanvas.style.visibility = "hidden"
+
     songMenu.style.visibility = "hidden"
-    audio1.play()
+    listOfSongs[currentIndex].div.style.visibility = "hidden"
+    guyPreview.pause()
+    guyMusic.play()
     // playButton.remove()
     updateAnimations();
 

@@ -46,7 +46,6 @@ rightArrow.addEventListener("mouseout", function() {
 // ====================================================
 
 const infoButton = document.getElementById("info-button")
-const infoButton2 = document.getElementById("info-button-2")
 const infoCancel = document.getElementById("info-cancel")
 const infoMenu = document.getElementById("info-menu")
 
@@ -67,13 +66,6 @@ infoCancel.addEventListener("mouseout", function() {
     infoCancel.src = "images/song-select/info-cancel.png"
 });
 
-infoButton2.addEventListener("mouseover", function() {
-    infoButton2.src = "images/song-select/information-hover.png"
-});
-
-infoButton2.addEventListener("mouseout", function() {
-    infoButton2.src = "images/song-select/information.png"
-});
 
 
 // INFO on CLICK 
@@ -85,14 +77,12 @@ infoCancel.addEventListener("click", function() {
     infoMenu.style.visibility = "hidden"
 });
 
-infoButton2.addEventListener("click", function() {
-    infoMenu.style.visibility = "visible"
-});
 
 
 // PLAY-GUY-BUTTON
 const playGuyButton = document.getElementById("play-guy-button")
 const songMenu = document.getElementById("song-menu")
+const songPlayer = document.getElementById("song-player")
 
 // playGuyButton.addEventListener("click", function(){
 //     songCanvas.style.visibility = "hidden"

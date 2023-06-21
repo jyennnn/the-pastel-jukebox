@@ -31,11 +31,12 @@
             <div id="start-text">START</div>
         </div>
     </section>
+
+    
     
     <!--=== SONG MENU =================================--> 
     <section id="song-menu">
         <!--images------------------>
-        <img id="info-button" src="images/song-select/information.png"></div>
         <img id="left-arrow" src="images/song-select/arrow.png"></div>
         <img id="right-arrow" src="images/song-select/arrow.png"></div>
 
@@ -86,59 +87,58 @@
     
     </section>
     
-        <!--=== INFO MENU =================================--> 
-        <section id="info-menu">
-            <img id="info-cancel" src="images/song-select/info-cancel.png"/>
-            <div id="info-text">
-                <h6 id="info-line-1">hit the respective keys according to the color of the falling balls.</h6>
-                <h6 id="info-line-2">the more accurate your rhythm, the higher score you gain.</h6>
-                <h6 id="info-line-3">good luck.</h6>
-            </div>
-            <img id="info-controls" src="images/song-select/info-controls.png"/>
+    <!--=== INFO MENU =================================--> 
+    <img id="info-button" src="images/song-select/information.png"></div>
+    
+    <section id="info-menu">
+        <img id="info-cancel" src="images/song-select/info-cancel.png"/>
+        <div id="info-text">
+            <h6>hit the respective keys according to the color of the falling balls.</h6>
+            <h6>the more accurate your rhythm, the higher score you gain.</h6>
+            <h6>good luck.</h6>
+        </div>
+        <img id="info-controls" src="images/song-select/info-controls.png"/>
             
-        </section>
+    </section>
 
     <!--=== GAME-MENU =================================--> 
-    <img id="info-button-2" src="images/song-select/information.png"></div>
 
-    <!--=== SONG =================================-->
-    <div id="song-board">SONG:</div>
-    <div id="song-title">guy</div>
-    <div id="song-artist">JYEN</div>
+        <!--song-board------------------>
+        <div id="song-board">SONG:</div>
+        <div id="song-title">guy</div>
+        <div id="song-artist">JYEN</div>
 
-    <!--=== COMBO =================================-->
-    <div id="combo-points">0</div>
-    <div id="combo">COMBO</div>
+        <!--combo-board------------------>
+        <div id="combo-points">0</div>
+        <div id="combo">COMBO</div>
 
-    <!--=== SCORE =================================-->
-    <div id="scoreboard">SCORE:</div>
-    <div id="score-points">0</div>
-    <div id="missboard">MISS:</div>
-    <div id="miss-points">0</div>
+        <!--score-board------------------>
+        <div id="scoreboard">SCORE:</div>
+        <div id="score-points">0</div>
+        
+        <div id="missboard">MISS:</div>
+        <div id="miss-points">0</div>
     
-    <div id="perfectboard">PERFECT:</div>
-    <div id="perfect-points">0</div>
-    <div id="greatboard">GREAT:</div>
-    <div id="great-points">0</div>
-    <div id="poorboard">POOR:</div>
-    <div id="poor-points">0</div>
-
-     <!--=== HITS =================================-->
-    <div id="hits">PERFECT</div>
-
-
-    <!--=== LIGHTS =================================-->
-    <div id="light-1"></div>
-    <div id="light-2"></div>
-    <div id="light-3"></div>
-    <div id="light-4"></div>
-    <div id="light-5"></div>
-
+        <div id="perfectboard">PERFECT:</div>
+        <div id="perfect-points">0</div>
+        
+        <div id="greatboard">GREAT:</div>
+        <div id="great-points">0</div>
     
+        <div id="poorboard">POOR:</div>
+        <div id="poor-points">0</div>
 
-    
+        <!--hits-animation------------------>
+        <div id="hits">PERFECT</div>
 
-    
+
+        <!--lights-animation------------------>
+        <div id="light-1"></div>
+        <div id="light-2"></div>
+        <div id="light-3"></div>
+        <div id="light-4"></div>
+        <div id="light-5"></div>
+
 
     <!--=== CANVASES =================================--> 
     <div id="TPJ">
@@ -149,10 +149,8 @@
         <canvas id="gameplay-layer1"></canvas>
         <canvas id="background-layer"></canvas>
     </div>
-
-
     
-    <!-- <script src="script/audio-tpj.js"></script> -->
+    <!--=== SCRIPTS =================================--> 
     <script src="script/start-layer-tpj.js"></script>
     <script src="script/songselect-layer-tpj.js"></script>
     <script src="script/background-layer-tpj.js"></script>
@@ -160,7 +158,5 @@
     <script src="script/text-layer-tpj.js"></script>
     <script src="script/gameplay-layer2-tpj.js"></script>
 
-
-    
 </body>
 </html>

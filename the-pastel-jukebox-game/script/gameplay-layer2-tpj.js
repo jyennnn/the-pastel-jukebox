@@ -162,6 +162,7 @@ let allCircles = [];
 playGuyButton.addEventListener("click", function(){
     songCanvas.style.visibility = "hidden"
     songMenu.style.visibility = "hidden"
+    listOfSongs[currentIndex].div.style.visibility = "hidden"
     guyPreview.pause()
     audio1.play()
     // playButton.remove()

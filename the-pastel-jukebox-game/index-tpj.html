@@ -13,12 +13,14 @@
 
 </head>
 <body>
+    <!--=== AUDIOS =================================--> 
+        <!--previews------------------>
+        <audio class= audio-file id="guy-preview" src="audio/loopable-guy-jyen.mp3"></audio>
+        <audio class= audio-file id="other-half-preview" src="audio/loopable-otherhalf-rangga.mp3"></audio>
+        <audio class= audio-file id="make-her-mine-preview" src="audio/loopable-makehermine-jason.mp3"></audio>
 
-    <!--audios------------------>
-    <audio id="guy-preview" src="audio/loopable-guy-jyen.mp3"></audio>
-    <audio id="audio1" controls src="audio/guymix6-tpj.mp3"></audio>
-    <audio id="other-half-preview" src="audio/loopable-otherhalf-rangga.mp3"></audio>
-    <audio id="make-her-mine-preview" src="audio/loopable-makehermine-jason.mp3"></audio>
+        <!--game-music------------------>
+        <audio class= audio-file id="guy-music" controls src="audio/guymix6-tpj.mp3"></audio>
 
     <!--=== START MENU =================================--> 
     <section id="start-menu">
@@ -36,22 +38,17 @@
     
     <!--=== SONG MENU =================================--> 
     <section id="song-menu">
-        <!--images------------------>
-        <img id="left-arrow" src="images/song-select/arrow.png"></div>
-        <img id="right-arrow" src="images/song-select/arrow.png"></div>
-
+        <div id="song-select">SONG SELECT</div>
         <!--song-player------------------>
         <div id="song-player">
-            <div id="song-select">SONG SELECT</div>
-            <div id="player-background"></div>
 
             <!--play-guy-jyen------------------>
             <div id="play-guy-jyen">
                 <div class="album-art-size">
                     <img src="images/jyen-guy.png"/>
                 </div>
-                <div id="song-name">guy</div>
-                <div id="song-artiste">JYEN</div>
+                <div class="song-name">guy</div>
+                <div class="song-artiste">JYEN</div>
                 <div class="play-button" id="play-guy-button">
                     <div class="circle-1"></div>
                     <div class="triangle-1"></div>
@@ -63,8 +60,8 @@
                 <div class="album-art-size">
                     <img src="images/rangga-otherhalf.jpeg"/>
                 </div>
-                <div id="song-name">Other Half</div>
-                <div id="song-artiste">Rangga Jones</div>
+                <div class="song-name">Other Half</div>
+                <div class="song-artiste">Rangga Jones</div>
                 <div class="play-button" id="play-otherhalf-button">
                     <div class="circle-1"></div>
                     <div class="triangle-1"></div>
@@ -76,15 +73,21 @@
                 <div class="album-art-size">
                     <img src="images/jason-makehermine.jpeg"/>
                 </div>
-                <div id="song-name">Make Her Mine</div>
-                <div id="song-artiste">Jason Yu</div>
+                <div class="song-name">Make Her Mine</div>
+                <div class="song-artiste">Jason Yu</div>
                 <div class="play-button" id="play-makehermine-button">
                     <div class="circle-1"></div>
                     <div class="triangle-1"></div>
                 </div>
             </div>
+
+            
+            <!--images------------------>
+            <img id="left-arrow" src="images/song-select/arrow.png"/>
+            <img id="right-arrow" src="images/song-select/arrow.png"/>
         </div>
-    
+        
+        
     </section>
     
     <!--=== INFO MENU =================================--> 
@@ -142,21 +145,21 @@
 
     <!--=== CANVASES =================================--> 
     <div id="TPJ">
-        <canvas id="start-layer"></canvas>
-        <canvas id="songselect-layer"></canvas>
+        <canvas id="background-layer"></canvas>
+        <!-- <canvas id="start-layer"></canvas> -->
+        <!-- <canvas id="songselect-layer"></canvas> -->
         <canvas id="text-layer"></canvas>
         <canvas id="gameplay-layer2"></canvas>
         <canvas id="gameplay-layer1"></canvas>
-        <canvas id="background-layer"></canvas>
     </div>
     
     <!--=== SCRIPTS =================================--> 
-    <script src="script/start-layer-tpj.js"></script>
-    <script src="script/songselect-layer-tpj.js"></script>
-    <script src="script/background-layer-tpj.js"></script>
-    <script src="script/gameplay-layer1-tpj.js"></script>
-    <script src="script/text-layer-tpj.js"></script>
-    <script src="script/gameplay-layer2-tpj.js"></script>
+    <script src="script/1-background-layer-tpj.js"></script>
+    <script src="script/2-start-layer-tpj.js"></script>
+    <script src="script/3-songselect-layer-tpj.js"></script>
+    <script src="script/4-text-layer-tpj.js"></script>
+    <script src="script/5-gameplay-layer1-tpj.js"></script>
+    <script src="script/6-gameplay-layer2-tpj.js"></script>
 
 </body>
 </html>

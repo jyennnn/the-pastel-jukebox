@@ -1,21 +1,21 @@
 
-// ====================================================
-// CONFIGURING CANVAS
-// ====================================================
-const songCanvas = document.querySelector("#songselect-layer")
-const songC = songCanvas.getContext("2d")
+// // ====================================================
+// // CONFIGURING CANVAS
+// // ====================================================
+// const songCanvas = document.querySelector("#songselect-layer")
+// const songC = songCanvas.getContext("2d")
 
-const songDpr = window.devicePixelRatio;
-const songRect = songCanvas.getBoundingClientRect();
+// const songDpr = window.devicePixelRatio;
+// const songRect = songCanvas.getBoundingClientRect();
 
-songCanvas.width = songRect.width * songDpr;
-songCanvas.height = songRect.height * songDpr;    
+// songCanvas.width = songRect.width * songDpr;
+// songCanvas.height = songRect.height * songDpr;    
 
-songC.scale(songDpr, songDpr);
+// songC.scale(songDpr, songDpr);
 
-songCanvas.style.width = `${songRect.width}px`;
-songCanvas.style.height = `${songRect.height}px`;
-// --------------------------------------------------
+// songCanvas.style.width = `${songRect.width}px`;
+// songCanvas.style.height = `${songRect.height}px`;
+// // --------------------------------------------------
 
 // ====================================================
 // ARROWS
@@ -101,17 +101,23 @@ const makeHerMinePreview = document.getElementById("make-her-mine-preview")
 
 const jyenObj = {
     div: playGuyJyen, 
-    audio: guyPreview
+    audio: guyPreview,
+    title: "guy",
+    artist: "JYEN"
 }
 
 const ranggaObj = {
     div: playOtherHalfRangga, 
-    audio: otherHalfPreview
+    audio: otherHalfPreview,
+    title: "Other Half",
+    artist: "Rangga Jones"
 }
 
 const jasonObj = {
     div: playMakeHerMineJason, 
-    audio: makeHerMinePreview
+    audio: makeHerMinePreview,
+    title: "Make Her Mine",
+    artist: "Jason Yu"
 }
 
 let listOfSongs = []

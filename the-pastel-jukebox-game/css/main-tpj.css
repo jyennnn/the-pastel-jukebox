@@ -4,40 +4,281 @@
     box-sizing: border-box;
 }
 
-/* #container {
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    background: black; 
-    width: 100%; 
-    height: 100%; 
-}
+/*--AUDIOS--------------------------------*/
 
-#canvas1 {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-}
-*/
-
-#audio1 {
+.audio-file {
     position: absolute;
-    width: 15%;
-    top: 0;
-    left: 0;
-    z-index: 5;
     visibility: hidden;
 }
 
+/*--START MENU--------------------------------*/
 
-#fileupload {
+#start-menu {
+    z-index: 10;
     position: absolute; 
-    top: 150px; 
-    color: white;
-    z-index: 6;
-} 
+    background-color: #b3a3ff;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-title {
+    z-index: 10; 
+    position: absolute; 
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    color: #9f6ac3;
+    user-select: none;
+}
+
+#game-title span{
+    color: #f6ceef;
+}
+
+#start-button {
+    z-index: 10; 
+    position: absolute; 
+    top: 45%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+#rectangle-1 {
+    position: absolute;
+    width: 250px;
+    height: 85px;
+    background-color: #fddcff;
+    border-radius: 50px;
+}
+
+#start-button:hover #rectangle-1 {
+    background-color: #eda6d2;
+}
+
+#rectangle-2 {
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    background-color: transparent;
+    border: 5px solid #eda6d2;
+    border-radius: 50px;
+}
+
+#start-button:hover #rectangle-2 {
+    border: 5px solid #fddcff;
+    border-radius: 50px;
+}
+
+#start-text {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #eda6d2;
+    margin: 4.5% 29%;
+}
+
+#start-button:hover #start-text {
+    color: #fddcff;
+}
+
+/*--SONG MENU--------------------------------*/
+
+#song-menu {
+    z-index: 7;
+    position: absolute; 
+    background-color: #b3a3ff;
+    width: 100vw;
+    height: 100vh;
+}
+
+#song-select {
+    z-index: 7; 
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: #e2c8f5;
+    user-select: none;
+}
+
+#song-player {
+    position: absolute; 
+    width: 300px;
+    height: 420px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#cdbbff;
+}
+
+/* 
+#play-guy-jyen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} */
+
+.album-art-size{
+    position: absolute; 
+    width: 250px;
+    height: 250px;
+    top: 4%;
+    left: 8%;
+}
+
+.album-art-size img{
+    width: 250px;
+    height: 250px;
+    opacity: 0.75;
+}
+
+.song-name {
+    position: absolute; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #8474d1;
+    user-select: none;
+    top: 64%;
+    left: 7%;
+}
+
+.song-artiste {
+    position: absolute; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    color: #8474d1;
+    user-select: none;
+    top: 71%;
+    left: 7%;
+}
+
+
+.play-button {
+    height: 74px;
+    width: 74px;
+}
+
+.circle-1 {
+    background-color: #9384db;
+    height: 74px;
+    width: 74px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 26%;
+    bottom: -5%;
+}
+
+.triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #cdbbff;
+    transform: rotate(90deg) translate(-50%, -50%);
+    position: absolute;
+    bottom: 5.5%;
+    left: 41%;
+}
+
+.play-button:hover .circle-1 {
+    background-color: hsl(234, 67%, 67%);
+}
+
+.play-button:hover .triangle-1 {
+    border-bottom: 30px solid #ffcffd;
+}
+
+
+#left-arrow {
+    z-index: 7; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 40%;
+    left: -23%; 
+    width: 30px; 
+}
+
+#right-arrow {
+    z-index: 7; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 43%;
+    right: -28%; 
+    width: 30px; 
+    transform: rotate(180deg);
+}
+
+
+
+
+#play-otherhalf-rangga {
+    visibility: hidden;
+}
+
+#play-makehermine-jason {
+    visibility: hidden;
+}
+
+#info-button {
+    z-index: 7; 
+    position: absolute;
+    width: 40px; 
+    top: 6%;
+    left: 7%;
+    transform: rotate(180deg);
+}
+
+
+/*--INFO MENU--------------------------------*/
+#info-menu {
+    z-index: 8; 
+    position: absolute; 
+    width: 1150px;
+    height: 550px;
+    top: 13%;
+    left: 12%;
+    background-color: #c5c2ff;
+    visibility: hidden;
+}
+
+#info-text {
+    margin-top: 60px;
+}
+
+#info-text h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: #8474d1;
+    padding: 20px 130px 0px 130px;
+
+}
+
+#info-controls {
+    width: 800px;
+    margin: 120px 190px 50px 190px;
+}
+
+#info-cancel {
+    position: absolute;
+    width: 35px;
+    margin-left: 93%;
+    margin-top: 3%;
+}
+
 
 /*--PLAY--------------------------------*/
 
@@ -354,259 +595,6 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*--START MENU--------------------------------*/
-
-#game-title {
-    z-index: 10; 
-    position: absolute; 
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font-weight: 200;
-    color: #9f6ac3;
-    user-select: none;
-}
-
-#game-title span{
-    color: #f6ceef;
-}
-
-#start-button {
-    z-index: 10; 
-    position: absolute; 
-    top: 45%;
-    left: 50%;
-    width: 250px;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
-#rectangle-1 {
-    position: absolute;
-    width: 250px;
-    height: 85px;
-    background-color: #fddcff;
-    border-radius: 50px;
-}
-
-#start-button:hover #rectangle-1 {
-    background-color: #eda6d2;
-}
-
-#rectangle-2 {
-    position: absolute;
-    width: 250px;
-    height: 80px;
-    background-color: transparent;
-    border: 5px solid #eda6d2;
-    border-radius: 50px;
-}
-
-#start-button:hover #rectangle-2 {
-    border: 5px solid #fddcff;
-    border-radius: 50px;
-}
-
-#start-text {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    font-weight: 200;
-    color: #eda6d2;
-    margin: 4.5% 29%;
-}
-
-#start-button:hover #start-text {
-    color: #fddcff;
-}
-
-/*--SONG MENU--------------------------------*/
-
-#guy-preview {
-    position: absolute;
-    visibility: hidden;
-}
-
-#other-half-preview {
-    position: absolute;
-    visibility: hidden;
-}
-
-#make-her-mine-preview  {
-    position: absolute;
-    visibility: hidden;
-}
-
-#song-player {
-    z-index: 7; 
-    position: absolute; 
-    user-select: none;
-    width: 320px;
-    height: 500px;
-    top: 12%;
-    left: 40%;
-}
-
-#play-otherhalf-rangga {
-    visibility: hidden;
-}
-
-#play-makehermine-jason {
-    visibility: hidden;
-}
-
-#song-select {
-    z-index: 7; 
-    position: absolute; 
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    font-weight: 200;
-    color: #e2c8f5;
-    user-select: none;
-    left: 18%;
-}
-
-
-#player-background {
-    position: absolute;
-    width: 300px;
-    height: 420px;
-    background-color: #cdbbff;
-    top: 12%;
-}
-
-.album-art-size img{
-    position: absolute;
-    margin: 20px 25px;
-    width: 250px;
-    height: 250px;
-    top: 12%;
-    opacity: 0.75;
-}
-
-#song-name {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    color: #8474d1;
-    user-select: none;
-    top: 67%;
-    left: 5%;
-}
-
-#song-artiste {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: 200;
-    color: #8474d1;
-    user-select: none;
-    top: 73%;
-    left: 5%;
-}
-
-.play-button {
-    position: absolute;
-    height: 74px;
-    width: 74px;
-    user-select: none;
-    top: 78%;
-    left: 35%;
-}
-
-.circle-1 {
-    background-color: #9384db;
-    height: 74px;
-    width: 74px;
-    border-radius: 50%;
-}
-
-.triangle-1 {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 30px solid #cdbbff;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 28%;
-    left: 35%;
-}
-
-.play-button:hover .circle-1 {
-    background-color: hsl(234, 67%, 67%);
-}
-
-.play-button:hover .triangle-1 {
-    border-bottom: 30px solid #ffcffd;
-}
-
-
-#left-arrow {
-    z-index: 7; 
-    position: absolute;
-    width: 30px; 
-    top: 45%;
-    left: 33%;
-}
-
-#right-arrow {
-    z-index: 7; 
-    position: absolute;
-    width: 30px; 
-    top: 45%;
-    right: 33%;
-    transform: rotate(180deg);
-}
-
-#info-button {
-    z-index: 7; 
-    position: absolute;
-    width: 40px; 
-    top: 6%;
-    left: 7%;
-    transform: rotate(180deg);
-}
-
-/*--INFO MENU--------------------------------*/
-#info-menu {
-    z-index: 8; 
-    position: absolute; 
-    width: 1150px;
-    height: 550px;
-    top: 13%;
-    left: 12%;
-    background-color: #c5c2ff;
-    visibility: hidden;
-}
-
-#info-text {
-    margin-top: 60px;
-}
-
-#info-text h6{
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-    font-weight: 200;
-    color: #8474d1;
-    padding: 20px 130px 0px 130px;
-
-}
-
-#info-controls {
-    width: 800px;
-    margin: 120px 190px 50px 190px;
-}
-
-#info-cancel {
-    position: absolute;
-    width: 35px;
-    margin-left: 93%;
-    margin-top: 3%;
-}
 
 
 /*--CANVAS--------------------------------*/
@@ -621,19 +609,19 @@ canvas {
     position: absolute; 
 }
 
-#start-layer {
+/* #start-layer {
     z-index: 9; 
     width: 100vw;
     height: 100vh;
     background-color: #b3a3ff;
-}
+} */
 
-#songselect-layer {
+/* #songselect-layer {
     z-index: 6; 
     width: 100vw;
     height: 100vh;
     background-color: #b3a3ff;
-}
+} */
 
 #text-layer {
     z-index: 4; 

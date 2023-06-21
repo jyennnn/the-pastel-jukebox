@@ -103,17 +103,66 @@ const songMenu = document.getElementById("song-menu")
 // SONG LIST
 // ====================================================
 
-const songPlayerRangga = document.getElementById("song-player-rangga")
+const playGuyJyen = document.getElementById("play-guy-jyen")
+const playOtherHalfRangga = document.getElementById("play-otherhalf-rangga")
+const playMakeHerMineJason = document.getElementById("play-makehermine-jason")
 const otherHalfPreview = document.getElementById("other-half-preview")
+const makeHerMinePreview = document.getElementById("make-her-mine-preview")
+
+const jyenObj = {
+    div: playGuyJyen, 
+    audio: guyPreview
+}
+
+const ranggaObj = {
+    div: playOtherHalfRangga, 
+    audio: otherHalfPreview
+}
+
+const jasonObj = {
+    div: playMakeHerMineJason, 
+    audio: makeHerMinePreview
+}
+
+let listOfSongs = []
+listOfSongs.push(jyenObj)
+listOfSongs.push(ranggaObj)
+listOfSongs.push(jasonObj)
+
+let currentIndex = 0
 
 rightArrow.addEventListener("click", function() {
-    songPlayerRangga.style.visibility = "visible"
-    guyPreview.pause()
-    otherHalfPreview.play()
+    if (currentIndex < listOfSongs.length - 1){
+        currentIndex += 1 
+        listOfSongs[currentIndex].div.style.visibility = "visible"
+        listOfSongs[currentIndex - 1].div.style.visibility = "hidden"
+        listOfSongs[currentIndex].audio.play()
+        listOfSongs[currentIndex - 1].audio.pause()
+    }
+    else if (currentIndex === listOfSongs.length - 1) {
+        currentIndex = 0
+        listOfSongs[currentIndex].div.style.visibility = "visible"
+        listOfSongs[listOfSongs.length - 1].div.style.visibility = "hidden"
+        listOfSongs[currentIndex].audio.play()
+        listOfSongs[listOfSongs.length - 1].audio.pause()
+    }
 });
 
+
 leftArrow.addEventListener("click", function() {
-    songPlayerRangga.style.visibility = "hidden"
-    guyPreview.play()
-    otherHalfPreview.pause()
+    if (currentIndex === 0) {
+        currentIndex = listOfSongs.length - 1
+        listOfSongs[currentIndex].div.style.visibility = "visible"
+        listOfSongs[0].div.style.visibility = "hidden"
+        listOfSongs[currentIndex].audio.play()
+        listOfSongs[0].audio.pause()
+    }
+
+    else if (currentIndex > 0){
+        currentIndex -= 1
+        listOfSongs[currentIndex].div.style.visibility = "visible"
+        listOfSongs[currentIndex + 1].div.style.visibility = "hidden"
+        listOfSongs[currentIndex].audio.play()
+        listOfSongs[currentIndex + 1].audio.pause()
+    }
 });

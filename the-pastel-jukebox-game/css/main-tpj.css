@@ -443,6 +443,11 @@
     visibility: hidden;
 }
 
+#make-her-mine-preview  {
+    position: absolute;
+    visibility: hidden;
+}
+
 #song-player {
     z-index: 7; 
     position: absolute; 
@@ -453,14 +458,11 @@
     left: 40%;
 }
 
-#song-player-rangga {
-    z-index: 7; 
-    position: absolute; 
-    user-select: none;
-    width: 320px;
-    height: 500px;
-    top: 12%;
-    left: 40%;
+#play-otherhalf-rangga {
+    visibility: hidden;
+}
+
+#play-makehermine-jason {
     visibility: hidden;
 }
 
@@ -476,7 +478,7 @@
 }
 
 
-#rectangle-3 {
+#player-background {
     position: absolute;
     width: 300px;
     height: 420px;
@@ -484,7 +486,7 @@
     top: 12%;
 }
 
-#rectangle-4 img{
+.album-art-size img{
     position: absolute;
     margin: 20px 25px;
     width: 250px;
@@ -515,7 +517,7 @@
     left: 5%;
 }
 
-#play-guy-button {
+.play-button {
     position: absolute;
     height: 74px;
     width: 74px;
@@ -524,14 +526,14 @@
     left: 35%;
 }
 
-#circle-1 {
+.circle-1 {
     background-color: #9384db;
     height: 74px;
     width: 74px;
     border-radius: 50%;
 }
 
-#triangle-1 {
+.triangle-1 {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -543,13 +545,14 @@
     left: 35%;
 }
 
-#play-guy-button:hover #circle-1 {
+.play-button:hover .circle-1 {
     background-color: hsl(234, 67%, 67%);
 }
 
-#play-guy-button:hover #triangle-1 {
+.play-button:hover .triangle-1 {
     border-bottom: 30px solid #ffcffd;
 }
+
 
 #left-arrow {
     z-index: 7; 

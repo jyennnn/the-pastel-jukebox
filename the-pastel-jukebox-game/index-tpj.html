@@ -13,22 +13,93 @@
 
 </head>
 <body>
-    <!-- <div id="container">
-        <canvas id="canvas1"></canvas>
-        <audio id="audio1" controls></audio>
-        <input type="file" id="fileupload" accept="audio/*"/>
-    </div> -->
 
+    <!--audios------------------>
     <audio id="guy-preview" src="audio/loopable-guy-jyen.mp3"></audio>
     <audio id="audio1" controls src="audio/guymix6-tpj.mp3"></audio>
     <audio id="other-half-preview" src="audio/loopable-otherhalf-rangga.mp3"></audio>
-    <!-- <input type="file" id="fileupload" accept="audio/*"/> -->
+    <audio id="make-her-mine-preview" src="audio/loopable-makehermine-jason.mp3"></audio>
 
-    <!--=== GAME-MENU - info button =================================--> 
+    <!--=== START MENU =================================--> 
+    <section id="start-menu">
+        <div id="game-title">
+            THE<span>PASTEL</span>JUKEBOX
+        </div>
+        <div id="start-button">
+            <div id="rectangle-1"></div>
+            <div id="rectangle-2"></div>
+            <div id="start-text">START</div>
+        </div>
+    </section>
+    
+    <!--=== SONG MENU =================================--> 
+    <section id="song-menu">
+        <!--images------------------>
+        <img id="info-button" src="images/song-select/information.png"></div>
+        <img id="left-arrow" src="images/song-select/arrow.png"></div>
+        <img id="right-arrow" src="images/song-select/arrow.png"></div>
+
+        <!--song-player------------------>
+        <div id="song-player">
+            <div id="song-select">SONG SELECT</div>
+            <div id="player-background"></div>
+
+            <!--play-guy-jyen------------------>
+            <div id="play-guy-jyen">
+                <div class="album-art-size">
+                    <img src="images/jyen-guy.png"/>
+                </div>
+                <div id="song-name">guy</div>
+                <div id="song-artiste">JYEN</div>
+                <div class="play-button" id="play-guy-button">
+                    <div class="circle-1"></div>
+                    <div class="triangle-1"></div>
+                </div>
+            </div>
+
+            <!--play-otherhalf-rangga------------------>
+            <div id="play-otherhalf-rangga">
+                <div class="album-art-size">
+                    <img src="images/rangga-otherhalf.jpeg"/>
+                </div>
+                <div id="song-name">Other Half</div>
+                <div id="song-artiste">Rangga Jones</div>
+                <div class="play-button" id="play-otherhalf-button">
+                    <div class="circle-1"></div>
+                    <div class="triangle-1"></div>
+                </div>
+            </div>
+
+            <!--play-makehermine-jason------------------>
+            <div id="play-makehermine-jason">
+                <div class="album-art-size">
+                    <img src="images/jason-makehermine.jpeg"/>
+                </div>
+                <div id="song-name">Make Her Mine</div>
+                <div id="song-artiste">Jason Yu</div>
+                <div class="play-button" id="play-makehermine-button">
+                    <div class="circle-1"></div>
+                    <div class="triangle-1"></div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+        <!--=== INFO MENU =================================--> 
+        <section id="info-menu">
+            <img id="info-cancel" src="images/song-select/info-cancel.png"/>
+            <div id="info-text">
+                <h6 id="info-line-1">hit the respective keys according to the color of the falling balls.</h6>
+                <h6 id="info-line-2">the more accurate your rhythm, the higher score you gain.</h6>
+                <h6 id="info-line-3">good luck.</h6>
+            </div>
+            <img id="info-controls" src="images/song-select/info-controls.png"/>
+            
+        </section>
+
+    <!--=== GAME-MENU =================================--> 
     <img id="info-button-2" src="images/song-select/information.png"></div>
-
-    <!--=== PLAY =================================-->
-    <!-- <button id="play-button">PLAY!</button> -->
 
     <!--=== SONG =================================-->
     <div id="song-board">SONG:</div>
@@ -63,64 +134,7 @@
     <div id="light-4"></div>
     <div id="light-5"></div>
 
-    <!--=== START MENU =================================--> 
-    <section id="start-menu">
-    <div id="game-title">THE<span>PASTEL</span>JUKEBOX</div>
-    <!-- <img id="start-button" src="images/start-menu/start-button.png"/> -->
-    <div id="start-button">
-        <div id="rectangle-1"></div>
-        <div id="rectangle-2"></div>
-        <div id="start-text">START</div>
-    </div>
-    </section>
-
-    <!--=== SONG MENU =================================--> 
-    <section id="song-menu">
-        <img id="info-button" src="images/song-select/information.png"></div>
-        <img id="left-arrow" src="images/song-select/arrow.png"></div>
-        <img id="right-arrow" src="images/song-select/arrow.png"></div>
-        <div class="left-arrow"></div>
-        <div id="song-player">
-            <div id="song-select">SONG SELECT</div>
-            <div id="rectangle-3"></div>
-            <div id="rectangle-4">
-                <img src="images/jyen-guy.png"/>
-            </div>
-            <div id="song-name">guy</div>
-            <div id="song-artiste">JYEN</div>
-                <div id="play-guy-button">
-                    <div id="circle-1"></div>
-                    <div id="triangle-1"></div>
-                </div>
-        </div>
-
-        <div id="song-player-rangga">
-            <div id="song-select">SONG SELECT</div>
-            <div id="rectangle-3"></div>
-            <div id="rectangle-4">
-                <img src="images/rangga-otherhalf.jpeg"/>
-            </div>
-            <div id="song-name">Other Half</div>
-            <div id="song-artiste">Rangga Jones</div>
-                <div id="play-guy-button">
-                    <div id="circle-1"></div>
-                    <div id="triangle-1"></div>
-                </div>
-        </div>
-
-    </section>
-
-    <!--=== INFO MENU =================================--> 
-    <section id="info-menu">
-        <img id="info-cancel" src="images/song-select/info-cancel.png"/>
-        <div id="info-text">
-            <h6 id="info-line-1">hit the respective keys according to the color of the falling balls.</h6>
-            <h6 id="info-line-2">the more accurate your rhythm, the higher score you gain.</h6>
-            <h6 id="info-line-3">good luck.</h6>
-        </div>
-        <img id="info-controls" src="images/song-select/info-controls.png"/>
-        
-    </section>
+    
 
     
 

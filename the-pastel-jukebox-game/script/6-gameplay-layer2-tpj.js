@@ -15,8 +15,6 @@ gameC2.scale(gamedpr2, gamedpr2);
 gameCanvas2.style.width = `${gamerect2.width}px`;
 gameCanvas2.style.height = `${gamerect2.height}px`;
 
-// let windowWidth = window.innerWidth
-// let windowHeight = window.innerHeight
 // --------------------------------------------------
 
 
@@ -491,13 +489,15 @@ function perfectScore(){
     perfectPoints.innerHTML = perfectCount
 
     // hits style
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"
     hits.style.visibility = "visible"
     hits.classList.add("hits-class")
     hits.innerHTML = "PERFECT"
-    hits.style.color = "#B4E4FF"
+    hits.style.color = "#6C53C2"
     setTimeout(() => {
-    hits.classList.remove("hits-class")
-    hits.style.visibility = "hidden"}, 500)
+        hits.classList.remove("hits-class")
+        hits.style.visibility = "hidden"}, 499)
 }
 
 function greatScore(){
@@ -513,13 +513,17 @@ function greatScore(){
 
     greatCount += 1
     greatPoints.innerHTML = greatCount
+
+    //hits 
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"
     hits.style.visibility = "visible"
     hits.classList.add("hits-class")
     hits.innerHTML = "GREAT"
-    hits.style.color = "#B5F1CC"
+    hits.style.color = "#B6DBE8"
     setTimeout(() => {
-    hits.classList.remove("hits-class")
-    hits.style.visibility = "hidden"}, 500)
+        hits.classList.remove("hits-class")
+        hits.style.visibility = "hidden"}, 499)
 }
 
 function poorScore(){
@@ -535,13 +539,17 @@ function poorScore(){
 
     poorCount += 1
     poorPoints.innerHTML = poorCount
+
+    // hits 
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"
     hits.style.visibility = "visible"
     hits.classList.add("hits-class")
     hits.innerHTML = "POOR"
-    hits.style.color = "#ECA869"
+    hits.style.color = "#FFD5B7"
     setTimeout(() => {
-    hits.classList.remove("hits-class")
-    hits.style.visibility = "hidden"}, 500)
+        hits.classList.remove("hits-class")
+        hits.style.visibility = "hidden"}, 499)
 }
 
 function missScore(){
@@ -557,13 +565,16 @@ function missScore(){
     comboPoints.classList.remove("combo-class")
     combo.classList.remove("combo-class")}, 300)
 
+    // hits 
+    hits.classList.remove("hits-class")
+    hits.style.visibility = "hidden"
     hits.style.visibility = "visible"
     hits.classList.add("hits-class")
     hits.innerHTML = "MISS"
-    hits.style.color = "#FF9F9F"
+    hits.style.color = "#D169C4"
     setTimeout(() => {
     hits.classList.remove("hits-class")
-    hits.style.visibility = "hidden"}, 500)
+    hits.style.visibility = "hidden"}, 499)
 }
 
 // ====================================================

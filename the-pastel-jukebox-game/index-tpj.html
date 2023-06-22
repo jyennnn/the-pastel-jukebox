@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main-tpj.css">  
 
     <!--fonts------------------>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:ital,wght@0,100;0,200;0,400;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,200;1,300;1,500;1,600;1,800&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -107,29 +107,38 @@
     <!--=== GAME-MENU =================================--> 
 
         <!--song-board------------------>
-        <div id="song-board">SONG:</div>
-        <div id="song-title">guy</div>
-        <div id="song-artist">JYEN</div>
+        <div id="song-board">
+            <h5><span>SONG:</span></h5>
+            <h5 id="song-title">guy</h5>
+            <h5 id="song-artist">JYEN</h5>
+        </div>
+        
 
         <!--combo-board------------------>
-        <div id="combo-points">0</div>
-        <div id="combo">COMBO</div>
+        <div id="combo-board">
+            <h5 id="combo-points">0</h5>
+            <h5 id="combo">COMBO</h5>
+        </div>
 
         <!--score-board------------------>
-        <div id="scoreboard">SCORE:</div>
-        <div id="score-points">0</div>
-        
-        <div id="missboard">MISS:</div>
-        <div id="miss-points">0</div>
+        <div id="scoreboard">
+            <h5 class="score-titles">SCORE:</h5>
+            <h5 id="score-points" class="score-numbers">0</h5>
+
+            <h5 id="missboard" class="score-titles">MISS:</h5>
+            <h5 id="miss-points" class="score-numbers">0</h5>
     
-        <div id="perfectboard">PERFECT:</div>
-        <div id="perfect-points">0</div>
+            <h5 id="perfectboard" class="score-titles">PERFECT:</h5>
+            <h5 id="perfect-points" class="score-numbers">0</h5>
         
-        <div id="greatboard">GREAT:</div>
-        <div id="great-points">0</div>
+            <h5 id="greatboard" class="score-titles">GREAT:</h5>
+            <h5 id="great-points" class="score-numbers">0</h5>
     
-        <div id="poorboard">POOR:</div>
-        <div id="poor-points">0</div>
+            <h5 id="poorboard" class="score-titles">POOR:</h5>
+            <h5 id="poor-points" class="score-numbers">0</h5>
+        </div>
+        
+        
 
         <!--hits-animation------------------>
         <div id="hits">PERFECT</div>
@@ -148,7 +157,7 @@
         <canvas id="background-layer"></canvas>
         <!-- <canvas id="start-layer"></canvas> -->
         <!-- <canvas id="songselect-layer"></canvas> -->
-        <canvas id="text-layer"></canvas>
+        <!-- <canvas id="text-layer"></canvas> -->
         <canvas id="gameplay-layer2"></canvas>
         <canvas id="gameplay-layer1"></canvas>
     </div>
@@ -157,7 +166,7 @@
     <script src="script/1-background-layer-tpj.js"></script>
     <script src="script/2-start-layer-tpj.js"></script>
     <script src="script/3-songselect-layer-tpj.js"></script>
-    <script src="script/4-text-layer-tpj.js"></script>
+    <script src="script/4-scoring-tpj.js"></script>
     <script src="script/5-gameplay-layer1-tpj.js"></script>
     <script src="script/6-gameplay-layer2-tpj.js"></script>
 

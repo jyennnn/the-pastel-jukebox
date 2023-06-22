@@ -120,14 +120,6 @@
     background-color:#cdbbff;
 }
 
-/* 
-#play-guy-jyen {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-} */
-
 .album-art-size{
     position: absolute; 
     width: 250px;
@@ -140,6 +132,7 @@
     width: 250px;
     height: 250px;
     opacity: 0.75;
+    user-select: none;
 }
 
 .song-name {
@@ -209,6 +202,7 @@
     bottom: 40%;
     left: -23%; 
     width: 30px; 
+    user-select: none;
 }
 
 #right-arrow {
@@ -219,10 +213,13 @@
     right: -28%; 
     width: 30px; 
     transform: rotate(180deg);
+    user-select: none;
 }
 
 
-
+#play-guy-jyen {
+    visibility: visible;
+}
 
 #play-otherhalf-rangga {
     visibility: hidden;
@@ -232,26 +229,37 @@
     visibility: hidden;
 }
 
+
+/*--INFO MENU--------------------------------*/
 #info-button {
     z-index: 7; 
     position: absolute;
-    width: 40px; 
-    top: 6%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    top: 9%;
     left: 7%;
-    transform: rotate(180deg);
+    width: 40px; 
+    user-select: none;
 }
 
-
-/*--INFO MENU--------------------------------*/
 #info-menu {
     z-index: 8; 
     position: absolute; 
+    transform: translate(-50%, -50%);
     width: 1150px;
     height: 550px;
-    top: 13%;
-    left: 12%;
+    top: 48%;
+    left: 50%;
     background-color: #c5c2ff;
     visibility: hidden;
+}
+
+#info-cancel {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 8%; 
+    left: 95%;
+    width: 35px;
+    user-select: none;
 }
 
 #info-text {
@@ -272,105 +280,64 @@
     margin: 120px 190px 50px 190px;
 }
 
-#info-cancel {
-    position: absolute;
-    width: 35px;
-    margin-left: 93%;
-    margin-top: 3%;
-}
 
+/*--GAME MENU--------------------------------*/
 
-/*--PLAY--------------------------------*/
-
-#play-button {
-    z-index: 5; 
-    position: absolute; 
-    top: 40px;
-    left: 60px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
-    background-color: rgb(207, 177, 235);
-    border: none;
-    padding: 10px;
-}
-
-#play-button:hover {
-    background-color: rgb(118, 118, 255);
-    color: #fff;
-}
-
-/*--SONG--------------------------------*/
-
+/*--song-board---*/
 #song-board {
     z-index: 5; 
     position: absolute; 
-    top: 110px;
-    left: 60px;
+    transform: translate(-50%, -50%);
+    top: 200px;
+    left: 150px;
+    display: flex;
+    align-items:flex-start; 
+    flex-direction: column; 
+    width: 200px;
+}
+
+#song-board h5 {
     font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 200;
+    user-select: none;
+    padding: 3px;
+}
+
+#song-board span {
     font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
 }
 
-#song-title {
+
+/*--combo-board---*/
+
+#combo-board {
     z-index: 5; 
     position: absolute; 
-    top: 140px;
-    left: 80px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 200;
-    color: white;
-    user-select: none;
+    top: 60px;
+    left: 630px;
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+    width: 200px;
 }
 
-#song-artist {
-    z-index: 5; 
-    position: absolute; 
-    top: 170px;
-    left: 80px;
+#combo-board h5{ 
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 200;
-    color: white;
-    user-select: none;
-}
-
-/*--COMBO--------------------------------*/
-
-#combo-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 6%;
-    left: 49%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     font-weight: 200;
     user-select: none;
+    padding: 3px;
 }
 
-#combo {
-    z-index: 5; 
-    position: absolute; 
-    top: 12%;
-    left: 45.8%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: 200;
-    color: white;
-    user-select: none;
-}
 
+/*--combo-animation---*/
 @keyframes scaleCombo {
     from {
         transform: scale(1.5);
     }
-
     to {
         transform: scale(1);
     }
@@ -386,138 +353,52 @@
     animation-fill-mode: none;
 }
 
-/*--SCORE--------------------------------*/
+/*--score-board---*/
 
 #scoreboard {
     z-index: 5; 
     position: absolute; 
-    top: 40px;
-    left: 1240px;
+    transform: translate(-50%, -50%);
+    top: 320px;
+    left: 1350px; 
+    display: flex;
+    align-items: flex-start; 
+    flex-direction: column; 
+    width: 200px;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+    user-select: none;}
+
+.score-titles {
     font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
+    padding: 20px 0 5px 0; 
 }
 
-#score-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 65px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+.score-numbers {
+    font-size: 35px;
+    padding: 2px 0 20px 0; 
     font-weight: 100;
-    color: white;
-    user-select: none;
 }
 
-#missboard {
-    z-index: 5; 
-    position: absolute; 
-    top: 150px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
-}
 
-#miss-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 180px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    color: white;
-    user-select: none;
-}
-
-#perfectboard {
-    z-index: 5; 
-    position: absolute; 
-    top: 250px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
-}
-
-#perfect-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 280px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    color: white;
-    user-select: none;
-}
-
-#greatboard {
-    z-index: 5; 
-    position: absolute; 
-    top: 350px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
-}
-
-#great-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 380px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    color: white;
-    user-select: none;
-}
-
-#poorboard {
-    z-index: 5; 
-    position: absolute; 
-    top: 450px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 200;
-    user-select: none;
-}
-
-#poor-points {
-    z-index: 5; 
-    position: absolute; 
-    top: 480px;
-    left: 1240px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    color: white;
-    user-select: none;
-}
-
-/*--HITS--------------------------------*/
+/*--hit-animation---*/
 
 #hits {
     z-index: 5; 
     position: absolute; 
-    top: 26%;
-    left: 42.5%;
+    transform: translate(-50%, -50%);
+    top: 240px;
+    left: 600px;
+    width: 250px;
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 100;
+    font-weight: 600;
+    font-style: italic;
     color: white;
     user-select: none;
     visibility: hidden;
@@ -525,7 +406,7 @@
 
 @keyframes scale {
     from {
-        transform: scale(2.7);
+        transform: scale(2.3);
     }
 
     to {
@@ -536,7 +417,7 @@
 .hits-class {
     animation-name: scale;
     animation-duration: 0.5s; 
-    animation-timing-function: ease-in;
+    animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -622,13 +503,13 @@ canvas {
     height: 100vh;
     background-color: #b3a3ff;
 } */
-
+/* 
 #text-layer {
     z-index: 4; 
     width: 100vw;
     height: 100vh;
     background-color: transparent;
-}
+} */
 
 #gameplay-layer2 {
     z-index: 3; 
@@ -653,11 +534,3 @@ canvas {
 
 
 
-
-/* #background-layer {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: #b2a4ff;
-
-} */

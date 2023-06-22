@@ -490,28 +490,8 @@ canvas {
     position: absolute; 
 }
 
-/* #start-layer {
-    z-index: 9; 
-    width: 100vw;
-    height: 100vh;
-    background-color: #b3a3ff;
-} */
 
-/* #songselect-layer {
-    z-index: 6; 
-    width: 100vw;
-    height: 100vh;
-    background-color: #b3a3ff;
-} */
-/* 
-#text-layer {
-    z-index: 4; 
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-} */
-
-#gameplay-layer2 {
+#gameplay-guy-jyen {
     z-index: 3; 
     width: 100vw;
     height: 100vh;

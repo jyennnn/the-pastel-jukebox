@@ -78,25 +78,24 @@ infoCancel.addEventListener("click", function() {
 });
 
 
+// ====================================================
+// SONG MENU
+// ====================================================
 
-// PLAY-GUY-BUTTON
-const playGuyButton = document.getElementById("play-guy-button")
+// Song Player 
 const songMenu = document.getElementById("song-menu")
 const songPlayer = document.getElementById("song-player")
 
-// playGuyButton.addEventListener("click", function(){
-//     songCanvas.style.visibility = "hidden"
-//     songMenu.style.visibility = "hidden"
-// })
-
-// ====================================================
-// SONG LIST
-// ====================================================
-
+// Jyen - Guy 
+const playGuyButton = document.getElementById("play-guy-button")
 const playGuyJyen = document.getElementById("play-guy-jyen")
+
+// Other Half - Rangga
 const playOtherHalfRangga = document.getElementById("play-otherhalf-rangga")
-const playMakeHerMineJason = document.getElementById("play-makehermine-jason")
 const otherHalfPreview = document.getElementById("other-half-preview")
+
+// Make Her Mine - Jason Yu
+const playMakeHerMineJason = document.getElementById("play-makehermine-jason")
 const makeHerMinePreview = document.getElementById("make-her-mine-preview")
 
 const jyenObj = {

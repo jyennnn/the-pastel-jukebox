@@ -56,93 +56,97 @@ For example, reaching a 100 combo will double the score per ball.</em>
 
 ## Game Creation Process
 
-##### Technologies Used 
+### Technologies Utilized
 
 This game is built with Javascript, HTML & CSS. 
 
-##### Approach Taken
+### Approach Taken
 
-There are 4 main menus - 
-Start Menu, Song Menu, Info Menu & Game Menu
+###### HTML
+> There are 4 main menus
+> - Start
+> - Song Select
+> - Information 
+> - Gameplay 
 
-In HTML, I built these menus like pages. 
-Page 1 is the Start Menu. 
-You flip to the next page, you see the song Menu. 
-The Info Menu is like a post it note, you can remove it and paste it on a page whenever you like. 
-The Game Menu is the last page where the magic happens. 
+Imagine these menus as different pages of a book. </br>
+Page 1 is the <em>Start Menu</em>.</br>
+Flip to the next page - <em>Song Menu</em>.</br>
+<em>Info Menu</em> is like a sticky note that can be removed and placed on any page.</br>
+<em>Game Menu</em> is the last page where all the magic happens.</br>
 
-With this thought process, I am able to visualise the game in layers where I can hide and reveal the pages that I require. 
+>This thought process allowed me to visualise the game in layers, hiding and revealing the pages.</br>
+The same approach was applied to the song player.
 
-I used the same method for the song player as well. 
+###### CSS
 
-For CSS, it was used mainly to style the game and some simple animations that get triggered by key presses. Some things I learnt from styling this is - 
-Since everything is on a single page, at different locations, not like a flex column or row. I had to use position - absolute in order to place the items at their exact position. Using "transform: translate(-50%, -50%)" help to centralise items to their parent container. especially when resizing the browser. 
+Primarily utilized for styling the game, including key-press-triggered animations.</br>
 
-For Javascript, I split them up into 6 layers. 
-Layer 1 - Main purple Background 
+>During the styling process, I gained insights on using <code>"position: absolute"</code> & <code>"transform: translate(-50%, -50%)"</code>.</br> 
+This was helpful with centering items especially when resizing the browser.</br>
 
-Layer 2 - Start Menu 
-once I click start, the song preview of the first song starts. and we go to the song menu. 
+###### Javascript
 
-Layer 3 - Song Menu 
-the main logic for this is the song player. 
-I saved each song in an object so that I can save different details of each song. 
-This object is pushed into an array which browse through. 
-I used the array indexes of each object, and if / else statements. 
+For Javascript, it was divided into six layers:
+>- <strong>Layer 1 - Main Purple Background</strong>
 
-Layer 4 - Score System 
-The main logic used for this is creating a variable to store the score/misses/etc and adding/subtracting to it when each function is ran. 
-Once I get the new score, i would replace the innerHTML value. 
+> - <strong>Layer 2 - Start Menu</strong>
 
-Layer 5 - Gameplay layer (stationary object that will not change)
-I used simple canvas and classes to create the objects here. 
-Some simple event listeners for the key light ups.
+Clicking "start" initiates the preview of the first song, progressing to the song menu.
 
-Layer 6 - Gameplay Song Layer 
-There are 2 main logics here - 
-creating the balls 
-removing the balls and calling the score functions. 
+>- <strong>Layer 3 - Song Menu</strong>
 
-Creating the balls - 
-I used setTimeout to add a delay to each ball. Hence these balls will be created at different times according to the beats i create. Using garage band, I note out all the timestamps I would like the ball to be created.
+The song player's core logic revolves around storing each song as an object within an array.</br> 
+Song selection is achieved using array indexes and conditional statements.
 
-Removing the balls - 
-If the ball is within range, I splice them out of their array so they stop animating. When this happens, a score is also added. I used  a lot of if and else and played around with the ball's y axis. 
+> - <strong>Layer 4 - Score System</strong>
 
-Layer 7..... - the layers onwards will each be for a different song. 
+A variable was used to store and update the score, misses, and other relevant details in each function.</br>
+The updated score was then displayed using <code>innerHTML.</code>
 
+>- <strong>Layer 5 - Gameplay layer (stationary objects)</strong>
 
-##### Challenges Faced 
+Canvas and classes were used to draw circles and lines, while event listeners were used for the key light-ups.
 
-On the canvas, my drawings were initially very blur. Hence, I found a way to configure my canvas at the start to increase the quality of the canvas. 
+>- <strong>Layer 6 - Gameplay layer (song #1)</strong>
 
-At the start I was looking for a way for Javascript to detect a beat and release balls randomly to the beat. I managed to do this, however, it would release the balls on the beat, and when it reaches the bottom, it wouldn't be on the beat anymore. I was also unable to set a delay, as it needs to detect the beat first before releasing the balls. 
-This idea was scraped in the end.
+<strong>Two main logics controlled this layer:</strong><br>
+1. Creation of balls 
+2. Removal the balls</br> 
 
-In order to create an animation on canvas, i would have to draw the circle many times according to the x & y axis. My first way of removing the balls when the keys are pressed is making the radius to 0. this is fine visually, however, internally javascript is removing this radius a whole lot of times. 
-I was using this to measure the score at the start. and instead of increasing the score by 1 it increase by 300. 
+Each ball was created with a delay set according to the beat/melody of the song.</br>
+Each ball was removed by splicing them out of the array to stop the animations</br> 
+Conditional statements and Y-axis adjustments were mostly utilized.
 
-In order to fix this, I had to put the new circles i created in an array. And remove this circle from the array. 
+>- <em><strong>*Layer 7 & more - Gameplay layer (song #xx)</em></strong>
 
 
+### Challenges Faced 
 
-##### Current Bugs to be Fixes 
-The game can only be played on a full screen. 
-the first two menus - start & song menu has been styled with CSS and are able to be resized. However, the gameplay screen is currently fixed. You have to start with a big screen. if you start with a small screen. things will get cut off. 
+Initially, the drawings on the canvas appeared blurry. To address this, the canvas was configured at the start to enhance its quality.
 
-Currently, only Jyen - Guy is playable. The rest are not ready to be played. 
+In the beginning, efforts were made to detect a beat using JavaScript and release balls randomly in sync with the beat. However, balls released on the beat would no longer align with it when reaching the bottom. Incorporating a delay posed an additional challenge since beat detection needed to occur before ball release. Ultimately, this idea was abandoned.
 
-The hits animation is not working the best, can make the animation smoother. 
+Creating animations on the canvas involved redrawing circles multiple times based on the X and Y axes. Initially, removing balls upon key presses involved reducing the radius to 0. Although visually acceptable, this method resulted in numerous unnecessary radius removals, impacting the score calculation. To resolve this, newly created circles were stored in an array, allowing for their removal.
 
-some falling balls are too close to each other, causing multiple balls to be hit at the same time.
 
-CSS has many repeated styles, I can reduce it more. 
+### Current Bugs to be Fixes 
 
-##### Additional Features to be added 
-- be able to go back to song menu 
-- add combo benfits 
-- add more songs 
-- add a grading like "A, B, C, D, Fail" 
-- add animation to the background each time a ball is hit
-- add a audio wave visualiser to the background which visualises the song
-- add more interesting animations to the key light ups 
+The game can only be played in fullscreen mode. While the first two menus (start and song menu) were styled with CSS and can be resized, the gameplay screen is currently fixed. Therefore, starting with a small screen will result in cut-off elements.
+
+Currently, only the Jyen - Guy song is playable, while others are not yet ready for gameplay.
+
+The hits animation could be improved for smoother visual effects.
+
+Some falling balls are positioned too closely, resulting in multiple balls being hit simultaneously.
+
+CSS contains redundant styles that could be further optimized.
+
+### Additional Features to be added 
+- Ability to return to the song menu
+- Integration of combo benefits
+- Expansion of the song selection with more options
+- Inclusion of a grading system (e.g., "A," "B," "C," "D," "Fail")
+- Implementation of background animations triggered by ball hits
+- Addition of an audio wave visualizer in the background to enhance the song experience
+- Incorporation of more captivating animations for key light-ups

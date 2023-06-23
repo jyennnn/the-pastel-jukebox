@@ -11,8 +11,6 @@ While our local music may not be widely recognized, this game aims to bring awar
 <strong>Experience the game here: </strong> LINK 
 </br>
 </br>
-</br>
-
 
 
 ### Game Walkthrough 
@@ -22,7 +20,7 @@ Begin the game by clicking the "Start" button.
 <strong>2. Song Selction Menu</strong> </br>
 Explore a diverse range of songs and select a song you wish to try.</br>
 Click "Play" when you're ready.
-![The Pastel Jukebox Song Menu](https://github.com/jyennnn/the-pastel-jukebox/blob/main/images/readme/ThePastelJukebox-SongMenu.png?raw=true)
+![The Pastel Jukebox Song Menu](https://github.com/jyennnn/the-pastel-jukebox/blob/main/images/readme/ThePastelJukebox-SongMenu2.png?raw=true)
 
 <strong>3. Game Instructions</strong></br>
 Access the instruction menu by clicking the "i" icon located at the top left corner.</br></br>

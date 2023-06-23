@@ -2,7 +2,7 @@
 ![The Pastel Jukebox Game](https://github.com/jyennnn/the-pastel-jukebox/blob/main/images/readme/ThePastelJukebox-StartMenu2.png?raw=true)
 
 
-### Concept 
+## Concept 
 A minimalistic and aesthetically pleasing rhythm beat game. <br>
 Play and discover a curated collection of local music from <strong>Singapore</strong>.<br>
 While our local music may not be widely recognized, this game aims to bring awareness of Singaporean music to the world by combining engaging visuals and enjoyable gameplay.</p>
@@ -13,7 +13,7 @@ While our local music may not be widely recognized, this game aims to bring awar
 </br>
 
 
-### Game Walkthrough 
+## Game Walkthrough 
 <strong>1. Start Menu</strong></br>
 Begin the game by clicking the "Start" button.
 
@@ -40,6 +40,8 @@ Aim for accurate timing to achieve higher grades and scores.
 There are four types of scores for each ball:</br>
 <em><strong>"Perfect"</em></strong>, <em><strong>"Great"</em></strong>, <em><strong>"Poor"</em></strong>, and <em><strong>"Miss"</em></strong></br>
 
+![The Pastel Jukebox Gameplay](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2pnbWxjeHlsYm9hbTY4aTg5bXkwd2xxa3pqeWd5bXM2MzJveWQ5ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tMg4vRyBz1tUXFKmNJ/giphy.gif)
+
 Points awarded for each score type:</br>
 <em><strong>Perfect + 1500 points</br>
 Great + 1000 points</br>
@@ -50,11 +52,6 @@ Miss - 500 points</em></strong></br>
 Hitting consecutive balls without missing increases your combo counter.</br>
 <em>*Additional benefits for combos will be included.
 For example, reaching a 100 combo will double the score per ball.</em>
-
-
-
-
-
 
 
 ## See also 

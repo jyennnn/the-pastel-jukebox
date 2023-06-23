@@ -1,21 +1,7 @@
 
-// // ====================================================
-// // CONFIGURING CANVAS
-// // ====================================================
-// const songCanvas = document.querySelector("#songselect-layer")
-// const songC = songCanvas.getContext("2d")
-
-// const songDpr = window.devicePixelRatio;
-// const songRect = songCanvas.getBoundingClientRect();
-
-// songCanvas.width = songRect.width * songDpr;
-// songCanvas.height = songRect.height * songDpr;    
-
-// songC.scale(songDpr, songDpr);
-
-// songCanvas.style.width = `${songRect.width}px`;
-// songCanvas.style.height = `${songRect.height}px`;
-// // --------------------------------------------------
+// ---------------------------+
+// 2nd Page - Song Menu       |
+// ---------------------------+
 
 // ====================================================
 // ARROWS

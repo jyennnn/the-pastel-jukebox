@@ -94,9 +94,13 @@ const playGuyJyen = document.getElementById("play-guy-jyen")
 const playOtherHalfRangga = document.getElementById("play-otherhalf-rangga")
 const otherHalfPreview = document.getElementById("other-half-preview")
 
+otherHalfPreview.loop = true
+
 // Make Her Mine - Jason Yu
 const playMakeHerMineJason = document.getElementById("play-makehermine-jason")
 const makeHerMinePreview = document.getElementById("make-her-mine-preview")
+
+makeHerMinePreview.loop = true
 
 const jyenObj = {
     div: playGuyJyen, 

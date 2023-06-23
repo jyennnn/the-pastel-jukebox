@@ -24,6 +24,7 @@ Click "Play" when you're ready.
 
 <strong>3. Game Instructions</strong></br>
 Access the instruction menu by clicking the "i" icon located at the top left corner.</br></br>
+![The Pastel Jukebox Info Menu](https://github.com/jyennnn/the-pastel-jukebox/blob/main/images/readme/ThePastelJukebox-InfoMenu2.png?raw=true)
 <em><strong>There are 5 main keys representing different colored balls:</strong></em></br>
 Press <em><strong>'S'</strong></em> for the green ball.</br>
 Press <em><strong>'D'</strong></em> for the blue ball.</br>

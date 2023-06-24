@@ -8,7 +8,7 @@ Play and discover a curated collection of local music from <strong>Singapore</st
 While our local music may not be widely recognized, this game aims to bring awareness of Singaporean music to the world by combining engaging visuals and enjoyable gameplay.</p>
 
 
-<strong>Experience the game here: </strong> LINK 
+<strong>Experience the game here: </strong> https://jyennnn.github.io/
 </br>
 </br>
 
@@ -120,33 +120,57 @@ Conditional statements and Y-axis adjustments were mostly utilized.
 
 >- <em><strong>*Layer 7 & more - Gameplay layer (song #xx)</em></strong>
 
+</br> 
 
 ### Challenges Faced 
 
-Initially, the drawings on the canvas appeared blurry. To address this, the canvas was configured at the start to enhance its quality.
+- <strong>Low quality and blurry canvas</strong></br>
+Initially, the drawings on the canvas appeared blurry.</br>
+To fix this, the canvas was configured at the start to enhance its quality.
 
-In the beginning, efforts were made to detect a beat using JavaScript and release balls randomly in sync with the beat. However, balls released on the beat would no longer align with it when reaching the bottom. Incorporating a delay posed an additional challenge since beat detection needed to occur before ball release. Ultimately, this idea was abandoned.
+</br>
 
-Creating animations on the canvas involved redrawing circles multiple times based on the X and Y axes. Initially, removing balls upon key presses involved reducing the radius to 0. Although visually acceptable, this method resulted in numerous unnecessary radius removals, impacting the score calculation. To resolve this, newly created circles were stored in an array, allowing for their removal.
+- <strong>Detecting beats</strong></br>
+In the beginning, efforts were made to detect a beat using JavaScript and release balls randomly in sync with the beat.</br> 
+However, balls released on the beat would no longer align with it when reaching the bottom.</br>
+Incorporating a delay posed an additional challenge since beat detection needed to occur before ball release.
+</br> Ultimately, this idea was abandoned.
+
+</br> 
+
+- <strong>Animation &  Javascript Logic</br></strong>
+Creating animations on the canvas involved redrawing circles multiple times based on the X and Y axes.</br> Initially, removing balls upon key presses involved reducing the radius to 0.</br> Although visually acceptable, this method resulted in numerous unnecessary radius removals, impacting the score calculation.</br> To resolve this, newly created circles were stored in an array, allowing for their removal.
 
 
 ### Current Bugs to be Fixes 
 
+- <strong>Only works on full screen</strong></br>
 The game can only be played in fullscreen mode. While the first two menus (start and song menu) were styled with CSS and can be resized, the gameplay screen is currently fixed. Therefore, starting with a small screen will result in cut-off elements.
 
+</br>
+
+- <strong>Only 1 song</strong></br>
 Currently, only the Jyen - Guy song is playable, while others are not yet ready for gameplay.
 
+</br>
+
+- <strong>Animations not very smooth</strong></br>
 The hits animation could be improved for smoother visual effects.
 
+</br>
+
+- <strong>Some balls positioned too closely</strong></br>
 Some falling balls are positioned too closely, resulting in multiple balls being hit simultaneously.
 
+</br>
+
+- <strong>CSS</strong></br>
 CSS contains redundant styles that could be further optimized.
 
 ### Additional Features to be added 
-- Ability to return to the song menu
-- Integration of combo benefits
-- Expansion of the song selection with more options
-- Inclusion of a grading system (e.g., "A," "B," "C," "D," "Fail")
-- Implementation of background animations triggered by ball hits
-- Addition of an audio wave visualizer in the background to enhance the song experience
-- Incorporation of more captivating animations for key light-ups
+- Return to the song menu
+- Add combo benefits
+- Add songs
+- Add a grading system <em>(eg: A, B, C, D, FAIL)</em>
+- Add an audio wave visualizer in the background
+- Add database of highscores

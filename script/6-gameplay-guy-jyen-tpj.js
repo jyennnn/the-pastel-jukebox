@@ -54,6 +54,13 @@ class FallingCircle {
     }
 }
 
+function getDistance(x1, y1, x2, y2) {
+    let xDistance = x2 - x1
+    let yDistance = y2 - y1
+
+    return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2))
+}
+
 
 // ====================================================
 // ANIMATED CIRCLES for JYEN - GUY 
@@ -362,6 +369,7 @@ let updateAnimations = function() {
                 circle.update();
             })
 
+
         // listening to keydowns -----------------
         window.addEventListener('keydown', function(e){
             const key = e.key.toLowerCase(); 
@@ -369,20 +377,24 @@ let updateAnimations = function() {
             allCircles.forEach((circle, index) => {
             // GREEN CIRCLE ----- 
                 if (key === 's' && circle.color === '#C5EEDF'){
+
+                // DETECT COLLISION ----------
+                let GreenCollision = getDistance(circle.x, circle.y, circle1.x, circle1.y)
+                
                     // Perfect 
-                    if (circle.y > 565 && circle.y < 635) {
+                    if (GreenCollision < 16) {
                         allCircles.splice(index, 1)
                         perfectScore()
                     }
 
                     // Great
-                    if (circle.y > 634 && circle.y < 675 ||  circle.y > 525 && circle.y < 566) {
+                    if (GreenCollision > 15 && GreenCollision < 31) {
                         allCircles.splice(index, 1)
                         greatScore()
                     }
                     
                     // Poor
-                    if (circle.y > 674 && circle.y < 701){
+                    if (GreenCollision > 30 && GreenCollision < 51){
                         allCircles.splice(index, 1)
                         poorScore()
                     }
@@ -390,20 +402,24 @@ let updateAnimations = function() {
                 
             // BLUE CIRCLE ----- 
                 if (key === 'd' && circle.color === "#B3DEFF"){
+
+                    // DETECT COLLISION ----------
+                    let BlueCollision = getDistance(circle.x, circle.y, circle2.x, circle2.y)
+
                     // Perfect 
-                    if (circle.y > 565 && circle.y < 635) {
+                    if (BlueCollision < 16) {
                         allCircles.splice(index, 1)
                         perfectScore()
                     }
 
                     // Great
-                    if (circle.y > 634 && circle.y < 675 ||  circle.y > 525 && circle.y < 566) {
+                    if (BlueCollision > 15 && BlueCollision < 31) {
                         allCircles.splice(index, 1)
                         greatScore()
                     }
                     
                     // Poor
-                    if (circle.y > 674 && circle.y < 701){
+                    if (BlueCollision > 30 && BlueCollision < 51){
                         allCircles.splice(index, 1)
                         poorScore()
                     }
@@ -411,20 +427,24 @@ let updateAnimations = function() {
 
             // PINK CIRCLE ----- 
                 if (e.keyCode === 32 && circle.color === "#F9CEEE"){
+
+                // DETECT COLLISION ----------
+                let PinkCollision = getDistance(circle.x, circle.y, circle3.x, circle3.y)
+
                     // Perfect 
-                    if (circle.y > 565 && circle.y < 635) {
+                    if (PinkCollision < 16) {
                         allCircles.splice(index, 1)
                         perfectScore()
                     }
 
                     // Great 
-                    if (circle.y > 634 && circle.y < 675 ||  circle.y > 525 && circle.y < 566) {
+                    if (PinkCollision > 15 && PinkCollision < 31) {
                         allCircles.splice(index, 1)
                         greatScore()
                     }
                     
                     // Poor
-                    if (circle.y > 674 && circle.y < 701){
+                    if (PinkCollision > 30 && PinkCollision < 51){
                         allCircles.splice(index, 1)
                         poorScore()
                     }
@@ -432,20 +452,24 @@ let updateAnimations = function() {
 
             // ORANGE CIRCLE ----- 
                 if (key === 'k' && circle.color === "#FFE1C8"){
+
+                // DETECT COLLISION ----------
+                let OrangeCollision = getDistance(circle.x, circle.y, circle4.x, circle4.y)
+
                     // Perfect 
-                    if (circle.y > 565 && circle.y < 635) {
+                    if (OrangeCollision < 16) {
                         allCircles.splice(index, 1)
                         perfectScore()
                     }
 
                     // Great
-                    if (circle.y > 634 && circle.y < 675 ||  circle.y > 525 && circle.y < 566) {
+                    if (OrangeCollision > 15 && OrangeCollision < 31) {
                         allCircles.splice(index, 1)
                         greatScore()
                     }
                     
                     // Poor
-                    if (circle.y > 674 && circle.y < 701){
+                    if (OrangeCollision > 30 && OrangeCollision < 51){
                         allCircles.splice(index, 1)
                         poorScore()
                     }
@@ -453,20 +477,24 @@ let updateAnimations = function() {
 
             // PURPLE CIRCLE ----- 
                 if (key === 'l' && circle.color === "#CAA0FF"){
+
+                // DETECT COLLISION ----------
+                let PurpleCollision = getDistance(circle.x, circle.y, circle5.x, circle5.y)
+
                     // Perfect 
-                    if (circle.y > 565 && circle.y < 635) {
+                    if (PurpleCollision < 16) {
                         allCircles.splice(index, 1)
                         perfectScore()
                     }
 
                     // Great
-                    if (circle.y > 634 && circle.y < 675 ||  circle.y > 525 && circle.y < 566) {
+                    if (PurpleCollision > 15 && PurpleCollision < 31) {
                         allCircles.splice(index, 1)
                         greatScore()
                     }
                     
                     // Poor
-                    if (circle.y > 674 && circle.y < 701){
+                    if (PurpleCollision > 30 && PurpleCollision < 51){
                         allCircles.splice(index, 1)
                         poorScore()
                     }
@@ -487,3 +515,6 @@ let updateAnimations = function() {
 
 
 
+// ====================================================
+// TOTAL SCORE & GRADING 
+// ==================================================== 

@@ -151,3 +151,4 @@ leftArrow.addEventListener("click", function() {
         listOfSongs[currentIndex + 1].audio.pause()
     }
 });
+
